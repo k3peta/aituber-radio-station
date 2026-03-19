@@ -1,0 +1,22 @@
+{
+  "id": "voice_catalog",
+  "title": "VOICEVOX音色カタログ",
+  "author": "k3peta",
+  "description": "VOICEVOXの全キャラクターの声を聴き比べ！セグメントごとに声が切り替わるカタログ番組。",
+  "duration": "20min",
+  "ai": "none",
+  "tags": ["VOICEVOX", "全台本", "カタログ"],
+  "setlist": "setlist.md",
+  "media": {
+    "media/jingle1.mp3": "assets/jingle1.mp3",
+    "media/jingle2.mp3": "assets/jingle2.mp3",
+    "media/bgm_chill.mp3": "assets/bgm_chill.mp3",
+    "media/opening.jpg": "assets/opening.jpg",
+    "media/ending.jpg": "assets/ending.jpg"
+  },
+  "credits": [
+    { "file": "jingle1.mp3", "title": "O Chanukah (Instrumental)", "artist": "Jingle Punks", "source": "YouTube Audio Library" },
+    { "file": "jingle2.mp3", "title": "Jingle Bells", "artist": "The Soundlings", "source": "YouTube Audio Library" },
+    { "file": "bgm_chill.mp3", "title": "Et Voila", "artist": "Chris Haugen", "source": "YouTube Audio Library" }
+  ]
+}

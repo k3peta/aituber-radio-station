@@ -283,7 +283,7 @@
     }
 
     const CARDS_DIR = 'cards'
-    const CARD_IDS = ['yofukashi', 'ohayou', 'hitorigoto', 'zatsugaku', 'history', 'tabi_kyoto', 'tabi_okinawa', 'tabi_hokkaido']
+    const CARD_IDS = ['yofukashi', 'ohayou', 'hitorigoto', 'zatsugaku', 'history', 'tabi_kyoto', 'tabi_okinawa', 'tabi_hokkaido', 'voice_catalog']
 
     const CREDITS_ALL = [
       { file: 'jingle1.mp3', title: 'O Chanukah (Instrumental)', artist: 'Jingle Punks', source: 'YouTube Audio Library' },
@@ -353,6 +353,14 @@
         id: 'tabi_hokkaido', title: '旅ラジオ 〜北海道編〜', author: 'k3peta',
         description: '大自然、海鮮グルメ、秘湯温泉。北海道の魅力を30分まるごと語り尽くす旅番組。',
         duration: '30min', tags: ['旅', '北海道', '全台本', 'グルメ'], ai: 'none',
+        setlist: 'setlist.md',
+        media: { 'media/jingle1.mp3': 'assets/jingle1.mp3', 'media/jingle2.mp3': 'assets/jingle2.mp3', 'media/bgm_chill.mp3': 'assets/bgm_chill.mp3', 'media/opening.jpg': 'assets/opening.jpg', 'media/ending.jpg': 'assets/ending.jpg' },
+        credits: CREDITS_ALL
+      },
+      voice_catalog: {
+        id: 'voice_catalog', title: 'VOICEVOX音色カタログ', author: 'k3peta',
+        description: 'VOICEVOXの全キャラクターの声を聴き比べ！セグメントごとに声が切り替わるカタログ番組。',
+        duration: '20min', tags: ['VOICEVOX', '全台本', 'カタログ'], ai: 'none',
         setlist: 'setlist.md',
         media: { 'media/jingle1.mp3': 'assets/jingle1.mp3', 'media/jingle2.mp3': 'assets/jingle2.mp3', 'media/bgm_chill.mp3': 'assets/bgm_chill.mp3', 'media/opening.jpg': 'assets/opening.jpg', 'media/ending.jpg': 'assets/ending.jpg' },
         credits: CREDITS_ALL

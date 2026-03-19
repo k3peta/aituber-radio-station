@@ -77,6 +77,7 @@ pause_between: 1500      # セグメント間のポーズ（ミリ秒）
 
 | プロパティ | 値 | 説明 |
 |-----------|-----|------|
+| `speaker` | スピーカーID | このセグメントだけ声を変更（フロントマターのデフォルトを上書き） |
 | `emotion` | `neutral` `happy` `sad` `surprised` `relaxed` | 感情（VOICEVOX スタイル） |
 | `intensity` | `0.0`〜`1.0` | 感情の強さ |
 | `bgm` | ファイルパス | BGM を開始（ループ再生） |
