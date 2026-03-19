@@ -26,7 +26,6 @@ pause_between: 800
 
 # 展開1
 [type: talk]
-[bgm: media/bgm_chill.mp3]
 [emotion: neutral]
 [intensity: 0.7]
 逆にイチゴはベリーじゃないの。植物学的にはね。
@@ -34,7 +33,6 @@ pause_between: 800
 
 # 展開2
 [type: talk]
-[bgm: media/bgm_chill.mp3]
 [emotion: happy]
 [intensity: 0.7]
 じゃあイチゴは何かっていうと、「偽果」。
@@ -43,14 +41,12 @@ pause_between: 800
 
 # 驚き
 [type: talk]
-[bgm: media/bgm_chill.mp3]
 [emotion: surprised]
 [intensity: 0.9]
 つまり、イチゴを食べてる時、あなたが食べてるのは……花！
 
 # オチ
 [type: talk]
-[bgm: media/bgm_chill.mp3]
 [emotion: happy]
 [intensity: 0.8]
 明日誰かに教えたくなったでしょ？
