@@ -1,0 +1,21 @@
+{
+  "id": "short_trivia",
+  "title": "知らないと損する雑学60秒",
+  "author": "k3peta",
+  "description": "バズる雑学を60秒でお届け！TikTok/Reels向け縦動画サンプル。",
+  "duration": "1min",
+  "ai": "none",
+  "tags": ["ショート", "雑学", "全台本", "縦動画"],
+  "setlist": "setlist.md",
+  "media": {
+    "media/jingle1.mp3": "assets/jingle1.mp3",
+    "media/jingle2.mp3": "assets/jingle2.mp3",
+    "media/bgm_chill.mp3": "assets/bgm_chill.mp3",
+    "media/opening.jpg": "assets/opening.jpg",
+    "media/ending.jpg": "assets/ending.jpg"
+  },
+  "credits": [
+    { "file": "jingle2.mp3", "title": "Jingle Bells", "artist": "The Soundlings", "source": "YouTube Audio Library" },
+    { "file": "bgm_chill.mp3", "title": "Et Voila", "artist": "Chris Haugen", "source": "YouTube Audio Library" }
+  ]
+}

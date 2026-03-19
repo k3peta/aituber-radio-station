@@ -283,7 +283,7 @@
     }
 
     const CARDS_DIR = 'cards'
-    const CARD_IDS = ['yofukashi', 'ohayou', 'hitorigoto', 'zatsugaku', 'history', 'tabi_kyoto', 'tabi_okinawa', 'tabi_hokkaido', 'voice_catalog', 'hirumachi']
+    const CARD_IDS = ['yofukashi', 'ohayou', 'hitorigoto', 'zatsugaku', 'history', 'tabi_kyoto', 'tabi_okinawa', 'tabi_hokkaido', 'voice_catalog', 'hirumachi', 'short_trivia']
 
     const CREDITS_ALL = [
       { file: 'jingle1.mp3', title: 'O Chanukah (Instrumental)', artist: 'Jingle Punks', source: 'YouTube Audio Library' },
@@ -371,6 +371,14 @@
         duration: '15min', tags: ['雑談', 'お便り', '全台本', '昼'], ai: 'none',
         setlist: 'setlist.md',
         media: { 'media/jingle1.mp3': 'assets/jingle1.mp3', 'media/jingle2.mp3': 'assets/jingle2.mp3', 'media/bgm_chill.mp3': 'assets/bgm_chill.mp3', 'media/opening.jpg': 'assets/opening.jpg', 'media/ending.jpg': 'assets/ending.jpg' },
+        credits: CREDITS_ALL
+      },
+      short_trivia: {
+        id: 'short_trivia', title: '知らないと損する雑学60秒', author: 'k3peta',
+        description: 'バズる雑学を60秒でお届け！TikTok/Reels向け縦動画サンプル。',
+        duration: '1min', tags: ['ショート', '雑学', '全台本', '縦動画'], ai: 'none',
+        setlist: 'setlist.md',
+        media: { 'media/jingle2.mp3': 'assets/jingle2.mp3', 'media/bgm_chill.mp3': 'assets/bgm_chill.mp3', 'media/ending.jpg': 'assets/ending.jpg' },
         credits: CREDITS_ALL
       }
     }
