@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AITuber Radio Station</title>
+  <meta name="description" content="AITuber Radio の台本カードを再生できるステーションサイト。ワンクリックでAIラジオ番組を体験。">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0a0a14;
+      --surface: #12122a;
+      --surface-hover: #1a1a3a;
+      --border: #1e1e40;
+      --text: #e0e0e8;
+      --text-muted: #888;
+      --accent: #e94560;
+      --accent-glow: rgba(233, 69, 96, 0.3);
+      --blue: #4ca6ff;
+      --green: #4caf50;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', 'Noto Sans JP', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      padding: 48px 20px 32px;
+      background: linear-gradient(180deg, #12122a 0%, var(--bg) 100%);
+    }
+    .header-icon { font-size: 48px; margin-bottom: 12px; }
+    .header h1 {
+      font-size: 28px; font-weight: 800;
+      background: linear-gradient(135deg, #fff, #e94560);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      margin-bottom: 8px;
+    }
+    .header p {
+      font-size: 14px; color: var(--text-muted);
+      max-width: 480px; margin: 0 auto; line-height: 1.6;
+    }
+
+    /* Status Banner */
+    .status-banner {
+      max-width: 720px; margin: 0 auto 24px;
+      padding: 10px 16px; border-radius: 10px;
+      font-size: 12px; text-align: center;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .status-banner.connected {
+      background: rgba(76, 175, 80, 0.1);
+      border: 1px solid rgba(76, 175, 80, 0.3);
+      color: var(--green);
+    }
+    .status-banner.disconnected {
+      background: rgba(233, 69, 96, 0.1);
+      border: 1px solid rgba(233, 69, 96, 0.3);
+      color: var(--accent);
+    }
+    .status-banner a {
+      color: var(--blue); text-decoration: none;
+    }
+    .status-banner a:hover { text-decoration: underline; }
+
+    /* Card Grid */
+    .cards {
+      max-width: 720px; margin: 0 auto;
+      padding: 0 20px 48px;
+      display: flex; flex-direction: column; gap: 16px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      transition: all 0.2s;
+      position: relative;
+      overflow: hidden;
+    }
+    .card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--blue));
+      opacity: 0; transition: opacity 0.2s;
+    }
+    .card:hover {
+      border-color: #2a2a50;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+    .card:hover::before { opacity: 1; }
+
+    .card-header {
+      display: flex; justify-content: space-between;
+      align-items: flex-start; gap: 16px;
+      margin-bottom: 12px;
+    }
+    .card-title {
+      font-size: 18px; font-weight: 700;
+      line-height: 1.4;
+    }
+    .card-meta {
+      font-size: 11px; color: var(--text-muted);
+      display: flex; gap: 12px; margin-top: 4px;
+    }
+    .card-desc {
+      font-size: 13px; color: #aaa;
+      line-height: 1.6; margin-bottom: 16px;
+    }
+
+    .card-tags {
+      display: flex; gap: 6px; flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    .tag {
+      font-size: 10px; padding: 3px 8px;
+      background: rgba(76, 166, 255, 0.1);
+      color: var(--blue); border-radius: 12px;
+      border: 1px solid rgba(76, 166, 255, 0.2);
+    }
+
+    .card-actions {
+      display: flex; gap: 8px;
+    }
+
+    .btn-play {
+      padding: 10px 24px;
+      background: linear-gradient(135deg, var(--accent), #c73850);
+      color: white; border: none; border-radius: 10px;
+      font-size: 13px; font-weight: 600; cursor: pointer;
+      display: flex; align-items: center; gap: 6px;
+      transition: all 0.15s;
+      box-shadow: 0 2px 8px var(--accent-glow);
+    }
+    .btn-play:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px var(--accent-glow);
+    }
+    .btn-play:disabled {
+      opacity: 0.5; cursor: not-allowed;
+      transform: none; box-shadow: none;
+    }
+
+    .btn-download {
+      padding: 10px 16px;
+      background: var(--surface-hover);
+      color: var(--text-muted); border: 1px solid var(--border);
+      border-radius: 10px; font-size: 12px; cursor: pointer;
+      text-decoration: none;
+      display: flex; align-items: center; gap: 6px;
+      transition: all 0.15s;
+    }
+    .btn-download:hover {
+      background: #222240; border-color: #3a3a5a;
+      color: var(--text);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center; padding: 32px 20px;
+      font-size: 11px; color: #555;
+      border-top: 1px solid var(--border);
+    }
+    .footer a { color: var(--text-muted); text-decoration: none; }
+    .footer a:hover { color: var(--text); }
+
+    /* How it works */
+    .how-section {
+      max-width: 720px; margin: 0 auto 32px;
+      padding: 0 20px;
+    }
+    .how-section h2 {
+      font-size: 16px; font-weight: 700;
+      margin-bottom: 16px; color: #ccc;
+    }
+    .steps {
+      display: flex; gap: 12px; flex-wrap: wrap;
+    }
+    .step {
+      flex: 1; min-width: 180px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+    }
+    .step-num {
+      width: 28px; height: 28px; line-height: 28px;
+      background: var(--accent); color: white;
+      border-radius: 50%; font-size: 13px; font-weight: 700;
+      margin: 0 auto 8px;
+    }
+    .step-title { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+    .step-desc { font-size: 11px; color: var(--text-muted); line-height: 1.5; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <div class="header-icon">📻</div>
+    <h1>AITuber Radio Station</h1>
+    <p>AITuber Radio の台本カードをワンクリックで再生。<br>Chrome 拡張機能と連携して、お好みの番組をローカルでお楽しみいただけます。</p>
+  </div>
+
+  <!-- Extension Status -->
+  <div id="statusBanner" class="status-banner disconnected">
+    <span>⏳ 拡張機能を確認中...</span>
+  </div>
+
+  <!-- How it works -->
+  <div class="how-section">
+    <h2>🛠️ はじめかた</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-title">拡張機能をインストール</div>
+        <div class="step-desc"><a href="https://github.com/k3peta/aituber-radio" target="_blank" style="color:var(--blue)">AITuber Radio</a> をChromeに追加</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-title">VOICEVOX を起動</div>
+        <div class="step-desc">音声合成エンジンをローカルで起動</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-title">▶ 再生を押す</div>
+        <div class="step-desc">好きなカードを選んでワンクリック再生！</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cards -->
+  <div class="cards" id="cardList">
+    <div style="text-align:center;color:#555;padding:20px">カードを読み込み中...</div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>
+      <a href="https://github.com/k3peta/aituber-radio" target="_blank">GitHub</a> ・
+      <a href="https://github.com/k3peta/aituber-radio-station" target="_blank">Station リポジトリ</a>
+    </p>
+    <p style="margin-top:8px">AITuber Radio Station — MIT License</p>
+  </div>
+
+  <script>
+    // ============================================
+    // 拡張機能ID（Chrome Web Store公開後に固定される。開発中は手動設定）
+    // ============================================
+    // ローカル開発時は chrome://extensions で確認した拡張機能IDを設定
+    let EXTENSION_ID = null
+
+    // 拡張機能IDをURLパラメータまたはlocalStorageから取得
+    const params = new URLSearchParams(location.search)
+    EXTENSION_ID = params.get('ext') || localStorage.getItem('aituber-radio-ext-id')
+    if (EXTENSION_ID) {
+      localStorage.setItem('aituber-radio-ext-id', EXTENSION_ID)
+    }
+
+    const CARDS_DIR = 'cards'
+    const CARD_IDS = ['yofukashi', 'ohayou', 'hitorigoto']
+
+    // フォールバック用カードデータ（file:// プロトコルでは fetch できないため）
+    const FALLBACK_CARDS = {
+      yofukashi: {
+        id: 'yofukashi', title: '怪談ちゃんの夜更かしラジオ', author: 'k3peta',
+        description: '深夜のゆるい雑談 × リスナー交流。食べ物・趣味・お悩み相談などバラエティに富んだフリートーク番組。',
+        duration: '30min', tags: ['雑談', '深夜', 'フリートーク'],
+        setlist: 'setlist.md',
+        media: { 'media/jingle1.mp3': 'assets/jingle1.mp3', 'media/jingle2.mp3': 'assets/jingle2.mp3', 'media/bgm_chill.mp3': 'assets/bgm_chill.mp3', 'media/opening.jpg': 'assets/opening.jpg', 'media/ending.jpg': 'assets/ending.jpg' }
+      },
+      ohayou: {
+        id: 'ohayou', title: '怪談ちゃんのおはようラジオ', author: 'k3peta',
+        description: '朝のテンション高めトーク × 豆知識 × ライフハック。元気をもらえる朝の情報バラエティ。',
+        duration: '30min', tags: ['朝', '豆知識', '元気'],
+        setlist: 'setlist.md',
+        media: { 'media/jingle1.mp3': 'assets/jingle1.mp3', 'media/jingle2.mp3': 'assets/jingle2.mp3', 'media/bgm_chill.mp3': 'assets/bgm_chill.mp3', 'media/opening.jpg': 'assets/opening.jpg', 'media/ending.jpg': 'assets/ending.jpg' }
+      },
+      hitorigoto: {
+        id: 'hitorigoto', title: '真夜中のひとりごと', author: 'k3peta',
+        description: '深夜のしっとり一人語り。時間・記憶・夢・音など哲学的な話題をゆったりペースで。',
+        duration: '30min', tags: ['深夜', '哲学', 'しっとり'],
+        setlist: 'setlist.md',
+        media: { 'media/jingle1.mp3': 'assets/jingle1.mp3', 'media/bgm_chill.mp3': 'assets/bgm_chill.mp3', 'media/opening.jpg': 'assets/opening.jpg', 'media/ending.jpg': 'assets/ending.jpg' }
+      }
+    }
+
+    // ============================================
+    // 拡張機能の存在確認
+    // ============================================
+    let extensionConnected = false
+
+    async function checkExtension() {
+      const banner = document.getElementById('statusBanner')
+
+      if (!EXTENSION_ID) {
+        banner.className = 'status-banner disconnected'
+        banner.innerHTML = `⚠️ 拡張機能IDが未設定です。<br>
+          <small>URLに <code>?ext=拡張機能ID</code> を付けてください。<br>
+          IDは <code>chrome://extensions</code> で確認できます。</small>`
+        return false
+      }
+
+      try {
+        const response = await new Promise((resolve, reject) => {
+          chrome.runtime.sendMessage(EXTENSION_ID, { action: 'check-installed' }, (res) => {
+            if (chrome.runtime.lastError) reject(chrome.runtime.lastError)
+            else resolve(res)
+          })
+        })
+
+        if (response && response.installed) {
+          extensionConnected = true
+          banner.className = 'status-banner connected'
+          banner.innerHTML = `✅ AITuber Radio v${response.version} 接続済み`
+          return true
+        }
+      } catch (e) {
+        console.log('Extension not found:', e)
+      }
+
+      banner.className = 'status-banner disconnected'
+      banner.innerHTML = `❌ AITuber Radio 拡張機能が見つかりません。
+        <a href="https://github.com/k3peta/aituber-radio" target="_blank">インストール</a>`
+      return false
+    }
+
+    // ============================================
+    // カード読み込み & 描画
+    // ============================================
+    async function loadCards() {
+      const container = document.getElementById('cardList')
+      container.innerHTML = ''
+
+      for (const id of CARD_IDS) {
+        try {
+          const res = await fetch(`${CARDS_DIR}/${id}/card.json`)
+          const card = await res.json()
+          container.appendChild(createCardElement(card, id))
+        } catch (e) {
+          // file:// プロトコルでは fetch できないのでフォールバック
+          if (FALLBACK_CARDS[id]) {
+            container.appendChild(createCardElement(FALLBACK_CARDS[id], id))
+          } else {
+            console.error(`Failed to load card ${id}:`, e)
+          }
+        }
+      }
+
+      if (container.children.length === 0) {
+        container.innerHTML = '<div style="text-align:center;color:#555">カードが見つかりませんでした</div>'
+      }
+    }
+
+    function createCardElement(card, id) {
+      const el = document.createElement('div')
+      el.className = 'card'
+
+      const tagsHtml = (card.tags || []).map(t => `<span class="tag">${t}</span>`).join('')
+
+      el.innerHTML = `
+        <div class="card-header">
+          <div>
+            <div class="card-title">${card.title}</div>
+            <div class="card-meta">
+              <span>👤 ${card.author}</span>
+              <span>⏱️ ${card.duration}</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-desc">${card.description}</div>
+        ${tagsHtml ? `<div class="card-tags">${tagsHtml}</div>` : ''}
+        <div class="card-actions">
+          <button class="btn-play" onclick="playCard('${id}')" ${extensionConnected ? '' : 'disabled'}>
+            ▶️ 再生
+          </button>
+          <a class="btn-download" href="https://github.com/k3peta/aituber-radio-station/tree/main/cards/${id}" target="_blank">
+            📥 ダウンロード
+          </a>
+        </div>
+      `
+      return el
+    }
+
+    // ============================================
+    // カード再生
+    // ============================================
+    async function playCard(cardId) {
+      if (!extensionConnected || !EXTENSION_ID) {
+        alert('AITuber Radio 拡張機能が接続されていません。')
+        return
+      }
+
+      try {
+        const res = await fetch(`${CARDS_DIR}/${cardId}/card.json`)
+        const card = await res.json()
+
+        // baseUrl を設定（相対パス解決用）
+        const baseUrl = new URL(`${CARDS_DIR}/${cardId}/`, location.href).toString().replace(/\/$/, '')
+
+        chrome.runtime.sendMessage(EXTENSION_ID, {
+          action: 'play-card',
+          card: {
+            ...card,
+            baseUrl,
+            setlist: card.setlist  // 相対パス → background.js が baseUrl + setlist で解決
+          }
+        }, (response) => {
+          if (response && response.ok) {
+            console.log('Card play started:', card.title)
+          } else {
+            console.error('Card play failed:', response)
+            alert('再生に失敗しました: ' + (response?.error || '不明なエラー'))
+          }
+        })
+      } catch (e) {
+        console.error('playCard error:', e)
+        alert('カードの読み込みに失敗しました')
+      }
+    }
+
+    // ============================================
+    // 初期化
+    // ============================================
+    ;(async () => {
+      await loadCards()
+      await checkExtension()
+
+      // 拡張機能の状態に応じてボタンを更新
+      document.querySelectorAll('.btn-play').forEach(btn => {
+        btn.disabled = !extensionConnected
+      })
+    })()
+  </script>
+</body>
+</html>

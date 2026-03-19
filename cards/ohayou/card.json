@@ -1,0 +1,16 @@
+{
+  "id": "ohayou",
+  "title": "怪談ちゃんのおはようラジオ",
+  "author": "k3peta",
+  "description": "朝のテンション高めトーク × 豆知識 × ライフハック。元気をもらえる朝の情報バラエティ。",
+  "duration": "30min",
+  "tags": ["朝", "豆知識", "元気"],
+  "setlist": "setlist.md",
+  "media": {
+    "media/jingle1.mp3": "assets/jingle1.mp3",
+    "media/jingle2.mp3": "assets/jingle2.mp3",
+    "media/bgm_chill.mp3": "assets/bgm_chill.mp3",
+    "media/opening.jpg": "assets/opening.jpg",
+    "media/ending.jpg": "assets/ending.jpg"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "yofukashi",
+  "title": "怪談ちゃんの夜更かしラジオ",
+  "author": "k3peta",
+  "description": "深夜のゆるい雑談 × リスナー交流。食べ物・趣味・お悩み相談などバラエティに富んだフリートーク番組。",
+  "duration": "30min",
+  "tags": ["雑談", "深夜", "フリートーク"],
+  "setlist": "setlist.md",
+  "media": {
+    "media/jingle1.mp3": "assets/jingle1.mp3",
+    "media/jingle2.mp3": "assets/jingle2.mp3",
+    "media/bgm_chill.mp3": "assets/bgm_chill.mp3",
+    "media/opening.jpg": "assets/opening.jpg",
+    "media/ending.jpg": "assets/ending.jpg"
+  }
+}

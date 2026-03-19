@@ -1,0 +1,15 @@
+{
+  "id": "hitorigoto",
+  "title": "真夜中のひとりごと",
+  "author": "k3peta",
+  "description": "深夜のしっとり一人語り。時間・記憶・夢・音など哲学的な話題をゆったりペースで。",
+  "duration": "30min",
+  "tags": ["深夜", "哲学", "しっとり"],
+  "setlist": "setlist.md",
+  "media": {
+    "media/jingle1.mp3": "assets/jingle1.mp3",
+    "media/bgm_chill.mp3": "assets/bgm_chill.mp3",
+    "media/opening.jpg": "assets/opening.jpg",
+    "media/ending.jpg": "assets/ending.jpg"
+  }
+}
