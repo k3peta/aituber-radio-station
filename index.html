@@ -464,8 +464,15 @@
       }
 
       try {
-        const res = await fetch(`${CARDS_DIR}/${cardId}/card.json`)
-        const card = await res.json()
+        let card
+        try {
+          const res = await fetch(`${CARDS_DIR}/${cardId}/card.json`)
+          card = await res.json()
+        } catch {
+          // fetch 失敗時はフォールバックデータを使用
+          card = FALLBACK_CARDS[cardId]
+          if (!card) throw new Error('Card not found')
+        }
 
         // baseUrl を設定（相対パス解決用）
         const baseUrl = new URL(`${CARDS_DIR}/${cardId}/`, location.href).toString().replace(/\/$/, '')
