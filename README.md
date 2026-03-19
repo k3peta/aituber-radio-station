@@ -38,9 +38,38 @@ AITuber Radio の台本カードをワンクリックで再生できるステー
   "setlist": "setlist.md",
   "media": {
     "media/bgm.mp3": "assets/bgm.mp3"
-  }
+  },
+  "credits": [
+    { "file": "bgm.mp3", "title": "曲名", "artist": "アーティスト名", "source": "YouTube Audio Library" }
+  ]
 }
 ```
+
+## 🔒 セキュリティ
+
+Station サイトと拡張機能の連携は以下のように設計されています。
+
+| 項目 | 詳細 |
+|---|---|
+| **通信方向** | Station → 拡張機能（一方向）。拡張機能からの送信はなし |
+| **送信内容** | カード JSON のみ（台本テキスト + メディア URL） |
+| **メディア取得** | 拡張機能が GitHub Pages 上の静的ファイルを fetch するだけ |
+| **実行される処理** | テキスト読み上げ（VOICEVOX）+ 音声/画像再生のみ |
+| **外部送信** | ユーザーが LLM API を設定している場合のみ、AI フリートーク用に使用 |
+| **ローカルデータ** | API キーなどのユーザー設定は `chrome.storage.local` にのみ保存 |
+| **許可サイト** | `manifest.json` の `externally_connectable` で接続元を制限 |
+
+カードに含まれるのは **テキスト（台本）と静的ファイルの URL** だけです。スクリプトの実行や任意コードの注入は行いません。
+
+## Music Credits
+
+サンプルカードで使用している楽曲はすべて YouTube Audio Library のフリー素材です。
+
+| 用途 | 曲名 | アーティスト |
+|---|---|---|
+| OP/ED ジングル | O Chanukah (Instrumental) | Jingle Punks |
+| コーナージングル | Jingle Bells | The Soundlings |
+| BGM | Et Voila | Chris Haugen |
 
 ## ライセンス
 

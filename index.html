@@ -270,6 +270,12 @@
     const CARDS_DIR = 'cards'
     const CARD_IDS = ['yofukashi', 'ohayou', 'hitorigoto']
 
+    const CREDITS_ALL = [
+      { file: 'jingle1.mp3', title: 'O Chanukah (Instrumental)', artist: 'Jingle Punks', source: 'YouTube Audio Library' },
+      { file: 'jingle2.mp3', title: 'Jingle Bells', artist: 'The Soundlings', source: 'YouTube Audio Library' },
+      { file: 'bgm_chill.mp3', title: 'Et Voila', artist: 'Chris Haugen', source: 'YouTube Audio Library' }
+    ]
+
     // フォールバック用カードデータ（file:// プロトコルでは fetch できないため）
     const FALLBACK_CARDS = {
       yofukashi: {
@@ -277,21 +283,24 @@
         description: '深夜のゆるい雑談 × リスナー交流。食べ物・趣味・お悩み相談などバラエティに富んだフリートーク番組。',
         duration: '30min', tags: ['雑談', '深夜', 'フリートーク'],
         setlist: 'setlist.md',
-        media: { 'media/jingle1.mp3': 'assets/jingle1.mp3', 'media/jingle2.mp3': 'assets/jingle2.mp3', 'media/bgm_chill.mp3': 'assets/bgm_chill.mp3', 'media/opening.jpg': 'assets/opening.jpg', 'media/ending.jpg': 'assets/ending.jpg' }
+        media: { 'media/jingle1.mp3': 'assets/jingle1.mp3', 'media/jingle2.mp3': 'assets/jingle2.mp3', 'media/bgm_chill.mp3': 'assets/bgm_chill.mp3', 'media/opening.jpg': 'assets/opening.jpg', 'media/ending.jpg': 'assets/ending.jpg' },
+        credits: CREDITS_ALL
       },
       ohayou: {
         id: 'ohayou', title: '怪談ちゃんのおはようラジオ', author: 'k3peta',
         description: '朝のテンション高めトーク × 豆知識 × ライフハック。元気をもらえる朝の情報バラエティ。',
         duration: '30min', tags: ['朝', '豆知識', '元気'],
         setlist: 'setlist.md',
-        media: { 'media/jingle1.mp3': 'assets/jingle1.mp3', 'media/jingle2.mp3': 'assets/jingle2.mp3', 'media/bgm_chill.mp3': 'assets/bgm_chill.mp3', 'media/opening.jpg': 'assets/opening.jpg', 'media/ending.jpg': 'assets/ending.jpg' }
+        media: { 'media/jingle1.mp3': 'assets/jingle1.mp3', 'media/jingle2.mp3': 'assets/jingle2.mp3', 'media/bgm_chill.mp3': 'assets/bgm_chill.mp3', 'media/opening.jpg': 'assets/opening.jpg', 'media/ending.jpg': 'assets/ending.jpg' },
+        credits: CREDITS_ALL
       },
       hitorigoto: {
         id: 'hitorigoto', title: '真夜中のひとりごと', author: 'k3peta',
         description: '深夜のしっとり一人語り。時間・記憶・夢・音など哲学的な話題をゆったりペースで。',
         duration: '30min', tags: ['深夜', '哲学', 'しっとり'],
         setlist: 'setlist.md',
-        media: { 'media/jingle1.mp3': 'assets/jingle1.mp3', 'media/bgm_chill.mp3': 'assets/bgm_chill.mp3', 'media/opening.jpg': 'assets/opening.jpg', 'media/ending.jpg': 'assets/ending.jpg' }
+        media: { 'media/jingle1.mp3': 'assets/jingle1.mp3', 'media/bgm_chill.mp3': 'assets/bgm_chill.mp3', 'media/opening.jpg': 'assets/opening.jpg', 'media/ending.jpg': 'assets/ending.jpg' },
+        credits: CREDITS_ALL.filter(c => c.file !== 'jingle2.mp3')
       }
     }
 
@@ -368,6 +377,14 @@
 
       const tagsHtml = (card.tags || []).map(t => `<span class="tag">${t}</span>`).join('')
 
+      let creditsHtml = ''
+      if (card.credits && card.credits.length > 0) {
+        const items = card.credits.map(c => `<span>♪ ${c.title} — ${c.artist}</span>`).join('')
+        creditsHtml = `<div style="font-size:10px;color:#666;margin-top:8px;display:flex;flex-wrap:wrap;gap:4px 12px">
+          <span style="color:#555">🎵 Music:</span>${items}
+        </div>`
+      }
+
       el.innerHTML = `
         <div class="card-header">
           <div>
@@ -388,6 +405,7 @@
             📥 ダウンロード
           </a>
         </div>
+        ${creditsHtml}
       `
       return el
     }
