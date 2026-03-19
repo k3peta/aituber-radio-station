@@ -1,0 +1,22 @@
+{
+  "id": "zatsugaku",
+  "title": "怪談ちゃんの雑学タイム",
+  "author": "k3peta",
+  "description": "知って楽しい雑学をたっぷりお届け！食べ物・動物・宇宙・日本語・人体の5テーマ。AI不要の全台本番組。",
+  "duration": "30min",
+  "ai": "none",
+  "tags": ["雑学", "全台本", "知識"],
+  "setlist": "setlist.md",
+  "media": {
+    "media/jingle1.mp3": "assets/jingle1.mp3",
+    "media/jingle2.mp3": "assets/jingle2.mp3",
+    "media/bgm_chill.mp3": "assets/bgm_chill.mp3",
+    "media/opening.jpg": "assets/opening.jpg",
+    "media/ending.jpg": "assets/ending.jpg"
+  },
+  "credits": [
+    { "file": "jingle1.mp3", "title": "O Chanukah (Instrumental)", "artist": "Jingle Punks", "source": "YouTube Audio Library" },
+    { "file": "jingle2.mp3", "title": "Jingle Bells", "artist": "The Soundlings", "source": "YouTube Audio Library" },
+    { "file": "bgm_chill.mp3", "title": "Et Voila", "artist": "Chris Haugen", "source": "YouTube Audio Library" }
+  ]
+}
