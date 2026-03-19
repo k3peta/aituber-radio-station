@@ -26,6 +26,7 @@ speaker: 38              # VOICEVOX スピーカーID（38=怪談ぺたん）
 speed: 0.90              # 読み上げ速度（0.5〜2.0）
 loop: false              # 番組をループ再生するか
 pause_between: 1500      # セグメント間のポーズ（ミリ秒）
+splash: media/splash.jpg # 録画時のスプラッシュ画像（省略=黒画面）
 ---
 ```
 
