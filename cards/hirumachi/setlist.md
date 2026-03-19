@@ -90,6 +90,34 @@ pause_between: 1500
 [emotion: happy]
 [intensity: 0.7]
 みんな、おたより本当にありがとう！引き続き募集中でーす。
+さて、ここでお知らせです！
+
+# CMジングル1
+[type: jingle]
+[file: media/jingle2.mp3]
+[duration: 5]
+[fadeOut: 1]
+
+# CM1 ずんだもんのずんだ餅
+[type: talk]
+[speaker: 3]
+[emotion: happy]
+[intensity: 0.8]
+ずんだもんなのだ！みんな、ずんだ餅は食べたのだ？
+東北が誇る最強スイーツ、ずんだ餅！
+枝豆をすりつぶした「ずんだ」を、つきたてのお餅にたっぷり絡めた至高の一品なのだ。
+甘さ控えめで、豆の風味がふわっと広がるのだ。
+コンビニでも買えるけど、本場のずんだは別格なのだ！
+仙台に来たら、まずずんだ餅を食べるのだ。これは命令なのだ！
+ずんだもんが自信を持っておすすめするのだ。ずんだ、最高なのだ！
+
+# CM明け1
+[type: talk]
+[speaker: 38]
+[emotion: happy]
+[intensity: 0.7]
+ずんだもん、ありがとう。ずんだ餅、あたしも好き。あの緑色がなんかかわいいよね。
+さて、番組に戻りましょう！
 
 # コーナージングル2
 [type: jingle]
@@ -130,6 +158,36 @@ pause_between: 1500
 [emotion: neutral]
 [intensity: 0.6]
 みんなの一位はなんだろう。今度おたよりで教えてね。
+ここでもう一つ、お知らせでーす。
+
+# CMジングル2
+[type: jingle]
+[file: media/jingle2.mp3]
+[duration: 5]
+[fadeOut: 1]
+
+# CM2 架空アプリ
+[type: talk]
+[speaker: 30]
+毎日の暮らしを、もっとスマートに。
+買い物リスト、スケジュール管理、家計簿。
+バラバラだった日常のツールが、ひとつのアプリにまとまりました。
+「ライフノート」なら、朝起きてから夜寝るまで、あなたの一日をトータルサポート。
+
+# CM2 キャッチコピー
+[type: talk]
+[speaker: 8]
+[emotion: happy]
+[intensity: 0.9]
+ライフノート！ダウンロードは今すぐ！あなたの毎日が変わるよ！
+
+# CM明け2
+[type: talk]
+[speaker: 38]
+[emotion: neutral]
+[intensity: 0.6]
+はい、お知らせでした。いい感じだったね。声が変わるとCMっぽさが増す。
+さあ最後のコーナー行きましょう！
 
 # コーナージングル3
 [type: jingle]
