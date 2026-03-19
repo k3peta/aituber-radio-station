@@ -4,7 +4,8 @@
   "author": "k3peta",
   "description": "深夜のしっとり一人語り。時間・記憶・夢・音など哲学的な話題をゆったりペースで。",
   "duration": "30min",
-  "tags": ["深夜", "哲学", "しっとり"],
+  "ai": "required",
+  "tags": ["深夜", "哲学", "しっとり", "AI"],
   "setlist": "setlist.md",
   "media": {
     "media/jingle1.mp3": "assets/jingle1.mp3",

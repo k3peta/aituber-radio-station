@@ -4,7 +4,8 @@
   "author": "k3peta",
   "description": "深夜のゆるい雑談 × リスナー交流。食べ物・趣味・お悩み相談などバラエティに富んだフリートーク番組。",
   "duration": "30min",
-  "tags": ["雑談", "深夜", "フリートーク"],
+  "ai": "required",
+  "tags": ["雑談", "深夜", "フリートーク", "AI"],
   "setlist": "setlist.md",
   "media": {
     "media/jingle1.mp3": "assets/jingle1.mp3",

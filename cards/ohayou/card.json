@@ -4,7 +4,8 @@
   "author": "k3peta",
   "description": "朝のテンション高めトーク × 豆知識 × ライフハック。元気をもらえる朝の情報バラエティ。",
   "duration": "30min",
-  "tags": ["朝", "豆知識", "元気"],
+  "ai": "required",
+  "tags": ["朝", "豆知識", "元気", "AI"],
   "setlist": "setlist.md",
   "media": {
     "media/jingle1.mp3": "assets/jingle1.mp3",

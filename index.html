@@ -291,7 +291,7 @@
       yofukashi: {
         id: 'yofukashi', title: '怪談ちゃんの夜更かしラジオ', author: 'k3peta',
         description: '深夜のゆるい雑談 × リスナー交流。食べ物・趣味・お悩み相談などバラエティに富んだフリートーク番組。',
-        duration: '30min', tags: ['雑談', '深夜', 'フリートーク'],
+        duration: '30min', tags: ['雑談', '深夜', 'フリートーク'], ai: 'required',
         setlist: 'setlist.md',
         media: { 'media/jingle1.mp3': 'assets/jingle1.mp3', 'media/jingle2.mp3': 'assets/jingle2.mp3', 'media/bgm_chill.mp3': 'assets/bgm_chill.mp3', 'media/opening.jpg': 'assets/opening.jpg', 'media/ending.jpg': 'assets/ending.jpg' },
         credits: CREDITS_ALL
@@ -299,7 +299,7 @@
       ohayou: {
         id: 'ohayou', title: '怪談ちゃんのおはようラジオ', author: 'k3peta',
         description: '朝のテンション高めトーク × 豆知識 × ライフハック。元気をもらえる朝の情報バラエティ。',
-        duration: '30min', tags: ['朝', '豆知識', '元気'],
+        duration: '30min', tags: ['朝', '豆知識', '元気'], ai: 'required',
         setlist: 'setlist.md',
         media: { 'media/jingle1.mp3': 'assets/jingle1.mp3', 'media/jingle2.mp3': 'assets/jingle2.mp3', 'media/bgm_chill.mp3': 'assets/bgm_chill.mp3', 'media/opening.jpg': 'assets/opening.jpg', 'media/ending.jpg': 'assets/ending.jpg' },
         credits: CREDITS_ALL
@@ -307,7 +307,7 @@
       hitorigoto: {
         id: 'hitorigoto', title: '真夜中のひとりごと', author: 'k3peta',
         description: '深夜のしっとり一人語り。時間・記憶・夢・音など哲学的な話題をゆったりペースで。',
-        duration: '30min', tags: ['深夜', '哲学', 'しっとり'],
+        duration: '30min', tags: ['深夜', '哲学', 'しっとり'], ai: 'required',
         setlist: 'setlist.md',
         media: { 'media/jingle1.mp3': 'assets/jingle1.mp3', 'media/bgm_chill.mp3': 'assets/bgm_chill.mp3', 'media/opening.jpg': 'assets/opening.jpg', 'media/ending.jpg': 'assets/ending.jpg' },
         credits: CREDITS_ALL.filter(c => c.file !== 'jingle2.mp3')
@@ -410,7 +410,15 @@
       const el = document.createElement('div')
       el.className = 'card'
 
-      const tagsHtml = (card.tags || []).map(t => `<span class="tag">${t}</span>`).join('')
+      const tagsHtml = (card.tags || []).filter(t => t !== 'AI').map(t => `<span class="tag">${t}</span>`).join('')
+
+      // AI バッジ
+      let aiBadge = ''
+      if (card.ai === 'required') {
+        aiBadge = '<span style="font-size:10px;padding:3px 8px;background:rgba(255,152,0,0.15);color:#ff9800;border-radius:12px;border:1px solid rgba(255,152,0,0.3)">🤖 AI必須</span>'
+      } else if (card.ai === 'optional') {
+        aiBadge = '<span style="font-size:10px;padding:3px 8px;background:rgba(76,175,80,0.15);color:#4caf50;border-radius:12px;border:1px solid rgba(76,175,80,0.3)">🤖 AI対応</span>'
+      }
 
       let creditsHtml = ''
       if (card.credits && card.credits.length > 0) {
@@ -427,6 +435,7 @@
             <div class="card-meta">
               <span>👤 ${card.author}</span>
               <span>⏱️ ${card.duration}</span>
+              ${aiBadge}
             </div>
           </div>
         </div>
