@@ -212,9 +212,20 @@
     <p>AITuber Radio の台本カードをワンクリックで再生。<br>Chrome 拡張機能と連携して、お好みの番組をローカルでお楽しみいただけます。</p>
   </div>
 
-  <!-- Extension Status -->
-  <div id="statusBanner" class="status-banner disconnected">
-    <span>⏳ 拡張機能を確認中...</span>
+  <!-- Extension Connection -->
+  <div id="connectionPanel" style="max-width:720px;margin:0 auto 24px;padding:16px 20px;background:var(--surface);border:1px solid var(--border);border-radius:12px">
+    <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+      <span style="font-size:13px;font-weight:600">🔌 拡張機能の接続</span>
+      <span id="connStatus" style="font-size:11px;color:var(--accent)">未接続</span>
+    </div>
+    <div style="font-size:11px;color:var(--text-muted);margin-bottom:10px">
+      AITuber Radio ポップアップの ID をコピーして貼り付けてください。
+    </div>
+    <div style="display:flex;gap:8px">
+      <input id="extIdInput" type="text" placeholder="拡張機能IDを入力" spellcheck="false"
+        style="flex:1;padding:8px 12px;background:#0a0a14;color:var(--text);border:1px solid var(--border);border-radius:8px;font-size:12px;font-family:monospace;outline:none">
+      <button id="connectBtn" style="padding:8px 16px;background:linear-gradient(135deg,var(--accent),#c73850);color:white;border:none;border-radius:8px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap">接続</button>
+    </div>
   </div>
 
   <!-- How it works -->
@@ -261,8 +272,7 @@
     let EXTENSION_ID = null
 
     // 拡張機能IDをURLパラメータまたはlocalStorageから取得
-    const params = new URLSearchParams(location.search)
-    EXTENSION_ID = params.get('ext') || localStorage.getItem('aituber-radio-ext-id')
+    EXTENSION_ID = new URLSearchParams(location.search).get('ext') || localStorage.getItem('aituber-radio-ext-id')
     if (EXTENSION_ID) {
       localStorage.setItem('aituber-radio-ext-id', EXTENSION_ID)
     }
@@ -305,44 +315,69 @@
     }
 
     // ============================================
-    // 拡張機能の存在確認
+    // 拡張機能の接続
     // ============================================
     let extensionConnected = false
 
-    async function checkExtension() {
-      const banner = document.getElementById('statusBanner')
+    const extIdInput = document.getElementById('extIdInput')
+    const connectBtn = document.getElementById('connectBtn')
+    const connStatus = document.getElementById('connStatus')
 
-      if (!EXTENSION_ID) {
-        banner.className = 'status-banner disconnected'
-        banner.innerHTML = `⚠️ 拡張機能IDが未設定です。<br>
-          <small>URLに <code>?ext=拡張機能ID</code> を付けてください。<br>
-          IDは <code>chrome://extensions</code> で確認できます。</small>`
+    // 保存済みIDを復元
+    const savedId = localStorage.getItem('aituber-radio-ext-id')
+    if (savedId) {
+      EXTENSION_ID = savedId
+      extIdInput.value = savedId
+    }
+    // URLパラメータ優先
+    const urlExt = new URLSearchParams(location.search).get('ext')
+    if (urlExt) {
+      EXTENSION_ID = urlExt
+      extIdInput.value = EXTENSION_ID
+      localStorage.setItem('aituber-radio-ext-id', EXTENSION_ID)
+    }
+
+    async function tryConnect(id) {
+      if (!id || id.length < 10) {
+        connStatus.textContent = '❌ IDが短すぎます'
+        connStatus.style.color = 'var(--accent)'
         return false
       }
-
       try {
         const response = await new Promise((resolve, reject) => {
-          chrome.runtime.sendMessage(EXTENSION_ID, { action: 'check-installed' }, (res) => {
+          chrome.runtime.sendMessage(id, { action: 'check-installed' }, (res) => {
             if (chrome.runtime.lastError) reject(chrome.runtime.lastError)
             else resolve(res)
           })
         })
-
         if (response && response.installed) {
+          EXTENSION_ID = id
           extensionConnected = true
-          banner.className = 'status-banner connected'
-          banner.innerHTML = `✅ AITuber Radio v${response.version} 接続済み`
+          localStorage.setItem('aituber-radio-ext-id', id)
+          connStatus.textContent = `✅ v${response.version} 接続済み`
+          connStatus.style.color = 'var(--green)'
+          connectBtn.textContent = '接続済み'
+          connectBtn.style.background = 'var(--green)'
+          // 再生ボタンを有効化
+          document.querySelectorAll('.btn-play').forEach(btn => { btn.disabled = false })
           return true
         }
       } catch (e) {
-        console.log('Extension not found:', e)
+        console.log('Connection failed:', e)
       }
-
-      banner.className = 'status-banner disconnected'
-      banner.innerHTML = `❌ AITuber Radio 拡張機能が見つかりません。
-        <a href="https://github.com/k3peta/aituber-radio" target="_blank">インストール</a>`
+      connStatus.textContent = '❌ 接続失敗（IDを確認してください）'
+      connStatus.style.color = 'var(--accent)'
       return false
     }
+
+    connectBtn.addEventListener('click', () => {
+      const id = extIdInput.value.trim()
+      tryConnect(id)
+    })
+    // Enter キーでも接続
+    extIdInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') tryConnect(extIdInput.value.trim())
+    })
 
     // ============================================
     // カード読み込み & 描画
@@ -452,12 +487,10 @@
     // ============================================
     ;(async () => {
       await loadCards()
-      await checkExtension()
-
-      // 拡張機能の状態に応じてボタンを更新
-      document.querySelectorAll('.btn-play').forEach(btn => {
-        btn.disabled = !extensionConnected
-      })
+      // 保存済みIDがあれば自動接続を試行
+      if (EXTENSION_ID) {
+        await tryConnect(EXTENSION_ID)
+      }
     })()
   </script>
 </body>
