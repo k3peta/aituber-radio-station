@@ -283,7 +283,7 @@
     }
 
     const CARDS_DIR = 'cards'
-    const CARD_IDS = ['yofukashi', 'ohayou', 'hitorigoto', 'zatsugaku', 'history', 'tabi_kyoto', 'tabi_okinawa', 'tabi_hokkaido', 'voice_catalog', 'hirumachi', 'short_trivia']
+    const CARD_IDS = ['news_morning', 'yofukashi', 'ohayou', 'hitorigoto', 'zatsugaku', 'history', 'tabi_kyoto', 'tabi_okinawa', 'tabi_hokkaido', 'voice_catalog', 'hirumachi', 'short_trivia']
 
     const CREDITS_ALL = [
       { file: 'jingle1.mp3', title: 'O Chanukah (Instrumental)', artist: 'Jingle Punks', source: 'YouTube Audio Library' },
@@ -293,6 +293,14 @@
 
     // フォールバック用カードデータ（file:// プロトコルでは fetch できないため）
     const FALLBACK_CARDS = {
+      news_morning: {
+        id: 'news_morning', title: '怪談ちゃんの朝イチニュース', author: 'k3peta',
+        description: 'AIがリアルタイム取得したニュース・天気・今日は何の日を怪談ちゃんがお届け。毎日異なる内容の情報番組。',
+        duration: '15min', tags: ['朝', 'ニュース', '天気', '自動生成'], ai: 'required',
+        setlist: 'setlist.md',
+        media: { 'media/jingle1.mp3': 'assets/jingle1.mp3', 'media/jingle2.mp3': 'assets/jingle2.mp3', 'media/bgm_chill.mp3': 'assets/bgm_chill.mp3', 'media/opening.jpg': 'assets/opening.jpg', 'media/ending.jpg': 'assets/ending.jpg' },
+        credits: CREDITS_ALL
+      },
       yofukashi: {
         id: 'yofukashi', title: '怪談ちゃんの夜更かしラジオ', author: 'k3peta',
         description: '深夜のゆるい雑談 × リスナー交流。食べ物・趣味・お悩み相談などバラエティに富んだフリートーク番組。',
