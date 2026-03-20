@@ -1,6 +1,6 @@
 ---
 title: 怪談ちゃんのはじめてのPython 第1回「パイソンって何っすか？」
-speaker: 18
+speaker: 38
 speed: 0.95
 pause_between: 800
 ---

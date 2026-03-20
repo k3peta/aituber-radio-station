@@ -1,6 +1,6 @@
 ---
 title: 怪談ちゃんのはじめてのSQL 第1回「データベースってなんっすか？」
-speaker: 18
+speaker: 38
 speed: 0.95
 pause_between: 800
 ---
