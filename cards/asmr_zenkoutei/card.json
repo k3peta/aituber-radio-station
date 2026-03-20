@@ -1,0 +1,20 @@
+{
+  "id": "asmr_zenkoutei",
+  "title": "全肯定おやすみASMR",
+  "author": "k3peta",
+  "description": "全部肯定してあげる。頭なでなで、ささやき、耳かき。ジムノペディの優しい音色に包まれて、おやすみなさい。",
+  "duration": "15min",
+  "ai": "none",
+  "tags": ["ASMR", "癒し", "全肯定", "おやすみ", "耳かき"],
+  "setlist": "setlist.md",
+  "media": {
+    "media/bgm_gymnopedie.mp3": "assets/bgm_gymnopedie.mp3",
+    "media/se_mimikaki_R.wav": "assets/se_mimikaki_R.wav",
+    "media/se_mimikaki_L.wav": "assets/se_mimikaki_L.wav"
+  },
+  "credits": [
+    { "file": "bgm_gymnopedie.mp3", "title": "Gymnopedie No.1", "artist": "Erik Satie", "source": "YouTube Audio Library", "license": "Public Domain" },
+    { "file": "se_mimikaki_R.wav", "title": "耳かき音010 コットンと綿棒 (R)", "artist": "川端ちよ", "source": "DIMENSHOP 素材部", "url": "https://oblsk.sakura.ne.jp/3d/?p=474" },
+    { "file": "se_mimikaki_L.wav", "title": "耳かき音010 コットンと綿棒 (L)", "artist": "川端ちよ", "source": "DIMENSHOP 素材部", "url": "https://oblsk.sakura.ne.jp/3d/?p=474" }
+  ]
+}

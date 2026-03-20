@@ -283,7 +283,7 @@
     }
 
     const CARDS_DIR = 'cards'
-    const CARD_IDS = ['news_morning', 'yofukashi', 'ohayou', 'hitorigoto', 'zatsugaku', 'history', 'tabi_kyoto', 'tabi_okinawa', 'tabi_hokkaido', 'voice_catalog', 'hirumachi', 'short_trivia']
+    const CARD_IDS = ['news_morning', 'yofukashi', 'ohayou', 'hitorigoto', 'zatsugaku', 'history', 'tabi_kyoto', 'tabi_okinawa', 'tabi_hokkaido', 'voice_catalog', 'hirumachi', 'short_trivia', 'asmr_zenkoutei']
 
     const CREDITS_ALL = [
       { file: 'jingle1.mp3', title: 'O Chanukah (Instrumental)', artist: 'Jingle Punks', source: 'YouTube Audio Library' },
@@ -388,6 +388,18 @@
         setlist: 'setlist.md',
         media: { 'media/jingle2.mp3': 'assets/jingle2.mp3', 'media/bgm_chill.mp3': 'assets/bgm_chill.mp3', 'media/ending.jpg': 'assets/ending.jpg' },
         credits: CREDITS_ALL
+      },
+      asmr_zenkoutei: {
+        id: 'asmr_zenkoutei', title: '全肯定おやすみASMR', author: 'k3peta',
+        description: '全部肯定してあげる。頭なでなで、ささやき、耳かき。ジムノペディの優しい音色に包まれて、おやすみなさい。',
+        duration: '15min', tags: ['ASMR', '癒し', '全肯定', 'おやすみ', '耳かき'], ai: 'none',
+        setlist: 'setlist.md',
+        media: { 'media/bgm_gymnopedie.mp3': 'assets/bgm_gymnopedie.mp3', 'media/se_mimikaki_R.wav': 'assets/se_mimikaki_R.wav', 'media/se_mimikaki_L.wav': 'assets/se_mimikaki_L.wav' },
+        credits: [
+          { file: 'bgm_gymnopedie.mp3', title: 'Gymnopedie No.1', artist: 'Erik Satie', source: 'YouTube Audio Library' },
+          { file: 'se_mimikaki_R.wav', title: '耳かき音010 (R)', artist: '川端ちよ', source: 'DIMENSHOP 素材部' },
+          { file: 'se_mimikaki_L.wav', title: '耳かき音010 (L)', artist: '川端ちよ', source: 'DIMENSHOP 素材部' }
+        ]
       }
     }
 
