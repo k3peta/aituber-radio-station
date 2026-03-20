@@ -283,7 +283,7 @@
     }
 
     const CARDS_DIR = 'cards'
-    const CARD_IDS = ['news_morning', 'yofukashi', 'ohayou', 'hitorigoto', 'zatsugaku', 'history', 'tabi_kyoto', 'tabi_okinawa', 'tabi_hokkaido', 'voice_catalog', 'hirumachi', 'short_trivia', 'asmr_zenkoutei']
+    const CARD_IDS = ['news_morning', 'yofukashi', 'ohayou', 'hitorigoto', 'zatsugaku', 'history', 'tabi_kyoto', 'tabi_okinawa', 'tabi_hokkaido', 'voice_catalog', 'hirumachi', 'short_trivia', 'asmr_zenkoutei', 'python_ep01', 'sql_ep01']
 
     const CREDITS_ALL = [
       { file: 'jingle1.mp3', title: 'O Chanukah (Instrumental)', artist: 'Jingle Punks', source: 'YouTube Audio Library' },
@@ -400,6 +400,22 @@
           { file: 'se_mimikaki_R.wav', title: '耳かき音010 (R)', artist: '川端ちよ', source: 'DIMENSHOP 素材部' },
           { file: 'se_mimikaki_L.wav', title: '耳かき音010 (L)', artist: '川端ちよ', source: 'DIMENSHOP 素材部' }
         ]
+      },
+      python_ep01: {
+        id: 'python_ep01', title: 'はじめてのPython #01「Pythonって何っすか？」', author: 'k3peta',
+        description: '怪談ちゃんがゼロからPythonを教える学習ポッドキャスト。第1回はインストール、Hello World、変数、計算。',
+        duration: '10min', tags: ['Python', 'プログラミング', '学習', 'シリーズ'], ai: 'none',
+        setlist: 'setlist.md',
+        media: { 'media/bgm_chill.mp3': 'assets/bgm_chill.mp3' },
+        credits: [{ file: 'bgm_chill.mp3', title: 'Gymnopedie No.1', artist: 'Erik Satie', source: 'YouTube Audio Library' }]
+      },
+      sql_ep01: {
+        id: 'sql_ep01', title: 'はじめてのSQL #01「データベースってなんっすか？」', author: 'k3peta',
+        description: '怪談ちゃんがSQLをゼロから教える学習ポッドキャスト。第1回はDBの基本、SELECT、WHERE、ORDER BY。',
+        duration: '12min', tags: ['SQL', 'データベース', '学習', 'シリーズ'], ai: 'none',
+        setlist: 'setlist.md',
+        media: { 'media/bgm_chill.mp3': 'assets/bgm_chill.mp3' },
+        credits: [{ file: 'bgm_chill.mp3', title: 'Gymnopedie No.1', artist: 'Erik Satie', source: 'YouTube Audio Library' }]
       }
     }
 

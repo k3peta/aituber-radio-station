@@ -1,0 +1,18 @@
+{
+  "id": "sql_ep01",
+  "title": "はじめてのSQL #01「データベースってなんっすか？」",
+  "author": "k3peta",
+  "description": "怪談ちゃんがSQLをゼロから教える学習ポッドキャスト。第1回はデータベースの基本、SELECT、WHERE、ORDER BY。",
+  "duration": "12min",
+  "ai": "none",
+  "tags": ["SQL", "データベース", "学習", "初心者", "シリーズ"],
+  "series": "はじめてのSQL",
+  "episode": 1,
+  "setlist": "setlist.md",
+  "media": {
+    "media/bgm_chill.mp3": "assets/bgm_chill.mp3"
+  },
+  "credits": [
+    { "file": "bgm_chill.mp3", "title": "Et Voila", "artist": "Chris Haugen", "source": "YouTube Audio Library" }
+  ]
+}
