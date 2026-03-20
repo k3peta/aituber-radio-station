@@ -1,6 +1,6 @@
 ---
 title: 怪談ちゃんの全肯定おやすみASMR ～おかえり、今日も頑張ったっすね～
-speaker: 38
+speaker: 22
 speed: 0.75
 pause_between: 2000
 ---
