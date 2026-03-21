@@ -1,0 +1,19 @@
+{
+  "id": "sql_ep03",
+  "title": "はじめてのSQL #03「数えて足して平均して！」",
+  "author": "k3peta",
+  "description": "怪談ちゃんがゼロから教える学習ポッドキャスト。第3回は集計関数COUNT,SUM,AVG,MIN,MAX,GROUP BY,HAVING。",
+  "duration": "10min",
+  "ai": "none",
+  "tags": ["SQL", "学習", "初心者", "シリーズ"],
+  "series": "はじめてのSQL",
+  "episode": 3,
+  "setlist": "setlist.md",
+  "media": {
+    "media/bgm.mp3": "assets/bgm.mp3",
+    "media/slide_aggregate.png": "assets/slide_aggregate.png"
+  },
+  "credits": [
+    { "file": "bgm.mp3", "title": "Et Voila", "artist": "Chris Haugen", "source": "YouTube Audio Library" }
+  ]
+}

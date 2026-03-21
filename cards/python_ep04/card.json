@@ -1,0 +1,19 @@
+{
+  "id": "python_ep04",
+  "title": "はじめてのPython #04「データをまとめて管理するっす！」",
+  "author": "k3peta",
+  "description": "怪談ちゃんがゼロから教える学習ポッドキャスト。第4回はリスト。作成,インデックス,追加,削除,スライス,forとの組み合わせ。",
+  "duration": "10min",
+  "ai": "none",
+  "tags": ["PYTHON", "学習", "初心者", "シリーズ"],
+  "series": "はじめてのPython",
+  "episode": 4,
+  "setlist": "setlist.md",
+  "media": {
+    "media/bgm.mp3": "assets/bgm.mp3",
+    "media/slide_list.png": "assets/slide_list.png"
+  },
+  "credits": [
+    { "file": "bgm.mp3", "title": "Et Voila", "artist": "Chris Haugen", "source": "YouTube Audio Library" }
+  ]
+}

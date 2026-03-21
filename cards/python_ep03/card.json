@@ -1,0 +1,19 @@
+{
+  "id": "python_ep03",
+  "title": "はじめてのPython #03「ぐるぐる回すっす！」",
+  "author": "k3peta",
+  "description": "怪談ちゃんがゼロから教える学習ポッドキャスト。第3回はforループ,whileループ,range,break,continue,九九プログラム。",
+  "duration": "10min",
+  "ai": "none",
+  "tags": ["PYTHON", "学習", "初心者", "シリーズ"],
+  "series": "はじめてのPython",
+  "episode": 3,
+  "setlist": "setlist.md",
+  "media": {
+    "media/bgm.mp3": "assets/bgm.mp3",
+    "media/slide_loops.png": "assets/slide_loops.png"
+  },
+  "credits": [
+    { "file": "bgm.mp3", "title": "Et Voila", "artist": "Chris Haugen", "source": "YouTube Audio Library" }
+  ]
+}

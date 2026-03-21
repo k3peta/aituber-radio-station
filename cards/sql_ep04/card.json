@@ -1,0 +1,19 @@
+{
+  "id": "sql_ep04",
+  "title": "はじめてのSQL #04「テーブルをくっつけるっす！」",
+  "author": "k3peta",
+  "description": "怪談ちゃんがゼロから教える学習ポッドキャスト。第4回はJOIN。INNER JOIN,LEFT JOIN,エイリアス,複数テーブル結合。",
+  "duration": "10min",
+  "ai": "none",
+  "tags": ["SQL", "学習", "初心者", "シリーズ"],
+  "series": "はじめてのSQL",
+  "episode": 4,
+  "setlist": "setlist.md",
+  "media": {
+    "media/bgm.mp3": "assets/bgm.mp3",
+    "media/slide_join.png": "assets/slide_join.png"
+  },
+  "credits": [
+    { "file": "bgm.mp3", "title": "Et Voila", "artist": "Chris Haugen", "source": "YouTube Audio Library" }
+  ]
+}
