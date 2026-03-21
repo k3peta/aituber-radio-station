@@ -1,0 +1,19 @@
+{
+  "id": "sql_ep03b",
+  "title": "はじめてのSQL 特別回「集計関数、こう使うっす！」",
+  "author": "k3peta",
+  "description": "集計関数の実例集。売上合計、月別推移、ランキング、HAVING活用など実務的なSQL分析パターン。",
+  "duration": "10min",
+  "ai": "none",
+  "tags": ["SQL", "学習", "実例", "シリーズ"],
+  "series": "はじめてのSQL",
+  "episode": 3.5,
+  "setlist": "setlist.md",
+  "media": {
+    "media/bgm.mp3": "assets/bgm.mp3",
+    "media/slide_aggregate_examples.png": "assets/slide_aggregate_examples.png"
+  },
+  "credits": [
+    { "file": "bgm.mp3", "title": "Et Voila", "artist": "Chris Haugen", "source": "YouTube Audio Library" }
+  ]
+}

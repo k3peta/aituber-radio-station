@@ -1,0 +1,18 @@
+{
+  "id": "howto_ep02",
+  "title": "AITuber Radio の使い方 #02「台本を書いてみるっす！」",
+  "author": "k3peta",
+  "description": "怪談ちゃんが教えるAITuber Radio使い方講座。シナリオ作成入門。セットリスト構文、読み指定、話者設定、再生方法。",
+  "duration": "10min",
+  "ai": "none",
+  "tags": ["AITuber Radio", "使い方", "チュートリアル"],
+  "series": "AITuber Radio の使い方",
+  "episode": 2,
+  "setlist": "setlist.md",
+  "media": {
+    "media/bgm.mp3": "assets/bgm.mp3"
+  },
+  "credits": [
+    { "file": "bgm.mp3", "title": "Et Voila", "artist": "Chris Haugen", "source": "YouTube Audio Library" }
+  ]
+}

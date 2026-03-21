@@ -1,0 +1,18 @@
+{
+  "id": "howto_ep03",
+  "title": "AITuber Radio の使い方 #03「もっとリッチな番組を作るっす！」",
+  "author": "k3peta",
+  "description": "怪談ちゃんが教えるAITuber Radio使い方講座。BGM、ジングル、フロート画像、感情タグ、AIで読み・感情を自動生成するtips。",
+  "duration": "10min",
+  "ai": "none",
+  "tags": ["AITuber Radio", "使い方", "チュートリアル"],
+  "series": "AITuber Radio の使い方",
+  "episode": 3,
+  "setlist": "setlist.md",
+  "media": {
+    "media/bgm.mp3": "assets/bgm.mp3"
+  },
+  "credits": [
+    { "file": "bgm.mp3", "title": "Et Voila", "artist": "Chris Haugen", "source": "YouTube Audio Library" }
+  ]
+}

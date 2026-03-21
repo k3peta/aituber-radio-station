@@ -1,0 +1,18 @@
+{
+  "id": "howto_ep01",
+  "title": "AITuber Radio の使い方 #01「はじめてのセットアップっす！」",
+  "author": "k3peta",
+  "description": "怪談ちゃんが教えるAITuber Radio使い方講座。セットアップガイド。VOICEVOX、拡張機能インストール、VRM読み込み、初回再生テスト。",
+  "duration": "10min",
+  "ai": "none",
+  "tags": ["AITuber Radio", "使い方", "チュートリアル"],
+  "series": "AITuber Radio の使い方",
+  "episode": 1,
+  "setlist": "setlist.md",
+  "media": {
+    "media/bgm.mp3": "assets/bgm.mp3"
+  },
+  "credits": [
+    { "file": "bgm.mp3", "title": "Et Voila", "artist": "Chris Haugen", "source": "YouTube Audio Library" }
+  ]
+}

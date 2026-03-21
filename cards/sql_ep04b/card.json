@@ -1,0 +1,21 @@
+{
+  "id": "sql_ep04b",
+  "title": "はじめてのSQL 特別回「JOINでこんなことができるっす！」",
+  "author": "k3peta",
+  "description": "JOINの実例集。3テーブル結合、未注文ユーザー検出、集計との組み合わせ、セルフJOIN。",
+  "duration": "10min",
+  "ai": "none",
+  "tags": ["SQL", "学習", "実例", "シリーズ"],
+  "series": "はじめてのSQL",
+  "episode": 4.5,
+  "setlist": "setlist.md",
+  "media": {
+    "media/bgm.mp3": "assets/bgm.mp3",
+    "media/slide_join.png": "assets/slide_join.png",
+    "media/slide_inner_join.png": "assets/slide_inner_join.png",
+    "media/slide_left_join.png": "assets/slide_left_join.png"
+  },
+  "credits": [
+    { "file": "bgm.mp3", "title": "Et Voila", "artist": "Chris Haugen", "source": "YouTube Audio Library" }
+  ]
+}
