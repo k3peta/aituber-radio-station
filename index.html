@@ -285,6 +285,7 @@
     <button class="category-tab active" data-category="all">🎙️ すべて</button>
     <button class="category-tab" data-category="radio">📻 ラジオ</button>
     <button class="category-tab" data-category="learn">📚 学習</button>
+    <button class="category-tab" data-category="other">🎵 その他</button>
   </div>
 
   <!-- Cards -->
@@ -318,11 +319,15 @@
     const CARD_CATEGORIES = {
       radio: {
         label: '📻 ラジオ',
-        ids: ['news_morning', 'yofukashi', 'ohayou', 'hitorigoto', 'zatsugaku', 'history', 'tabi_kyoto', 'tabi_okinawa', 'tabi_hokkaido', 'voice_catalog', 'hirumachi', 'short_trivia', 'asmr_zenkoutei']
+        ids: ['news_morning', 'yofukashi', 'ohayou', 'hitorigoto', 'zatsugaku', 'history', 'tabi_kyoto', 'tabi_okinawa', 'tabi_hokkaido', 'hirumachi', 'short_trivia']
       },
       learn: {
         label: '📚 学習',
         ids: ['python_ep01', 'python_ep02', 'sql_ep01', 'sql_ep02']
+      },
+      other: {
+        label: '🎵 その他',
+        ids: ['voice_catalog', 'asmr_zenkoutei']
       }
     }
     const CARD_IDS = Object.values(CARD_CATEGORIES).flatMap(c => c.ids)
