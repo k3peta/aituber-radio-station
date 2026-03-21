@@ -1,0 +1,19 @@
+{
+  "id": "git_ep02",
+  "title": "はじめてのGit #02「実際に使ってみるっす！」",
+  "author": "k3peta",
+  "description": "怪談ちゃんがゼロから教えるGit入門。第2回はinit,add,commit,status,log,pushの実践コマンド操作。",
+  "duration": "10min",
+  "ai": "none",
+  "tags": ["Git", "GitHub", "学習", "初心者", "シリーズ"],
+  "series": "はじめてのGit",
+  "episode": 2,
+  "setlist": "setlist.md",
+  "media": {
+    "media/bgm.mp3": "assets/bgm.mp3",
+    "media/slide_git_commands.png": "assets/slide_git_commands.png"
+  },
+  "credits": [
+    { "file": "bgm.mp3", "title": "Et Voila", "artist": "Chris Haugen", "source": "YouTube Audio Library" }
+  ]
+}

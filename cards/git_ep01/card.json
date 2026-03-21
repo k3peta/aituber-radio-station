@@ -1,0 +1,19 @@
+{
+  "id": "git_ep01",
+  "title": "はじめてのGit #01「バージョン管理って何っすか？」",
+  "author": "k3peta",
+  "description": "怪談ちゃんがゼロから教えるGit入門。第1回はバージョン管理の概念、GitとGitHubの違い、リポジトリ、基本の3ステップ。",
+  "duration": "10min",
+  "ai": "none",
+  "tags": ["Git", "GitHub", "学習", "初心者", "シリーズ"],
+  "series": "はじめてのGit",
+  "episode": 1,
+  "setlist": "setlist.md",
+  "media": {
+    "media/bgm.mp3": "assets/bgm.mp3",
+    "media/slide_git_basics.png": "assets/slide_git_basics.png"
+  },
+  "credits": [
+    { "file": "bgm.mp3", "title": "Et Voila", "artist": "Chris Haugen", "source": "YouTube Audio Library" }
+  ]
+}
