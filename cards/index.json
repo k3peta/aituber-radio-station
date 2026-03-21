@@ -1,0 +1,368 @@
+[
+  {
+    "id": "asmr_zenkoutei",
+    "title": "全肯定おやすみASMR",
+    "tags": [
+      "ASMR",
+      "癒し",
+      "全肯定",
+      "おやすみ",
+      "耳かき"
+    ],
+    "ai": "none",
+    "duration": "15min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "git_ep01",
+    "title": "はじめてのGit #01「バージョン管理って何っすか？」",
+    "tags": [
+      "Git",
+      "GitHub",
+      "学習",
+      "初心者",
+      "シリーズ"
+    ],
+    "ai": "none",
+    "duration": "10min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "git_ep02",
+    "title": "はじめてのGit #02「実際に使ってみるっす！」",
+    "tags": [
+      "Git",
+      "GitHub",
+      "学習",
+      "初心者",
+      "シリーズ"
+    ],
+    "ai": "none",
+    "duration": "10min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "hirumachi",
+    "title": "怪談ちゃんのひるまちラジオ",
+    "tags": [
+      "雑談",
+      "お便り",
+      "全台本",
+      "昼"
+    ],
+    "ai": "none",
+    "duration": "15min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "history",
+    "title": "怪談ちゃんのなるほどヒストリー",
+    "tags": [
+      "歴史",
+      "全台本",
+      "知識"
+    ],
+    "ai": "none",
+    "duration": "10min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "hitorigoto",
+    "title": "真夜中のひとりごと",
+    "tags": [
+      "深夜",
+      "哲学",
+      "しっとり",
+      "AI"
+    ],
+    "ai": "required",
+    "duration": "30min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "howto_ep01",
+    "title": "AITuber Radio の使い方 #01「はじめてのセットアップっす！」",
+    "tags": [
+      "AITuber Radio",
+      "使い方",
+      "チュートリアル"
+    ],
+    "ai": "none",
+    "duration": "10min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "howto_ep02",
+    "title": "AITuber Radio の使い方 #02「台本を書いてみるっす！」",
+    "tags": [
+      "AITuber Radio",
+      "使い方",
+      "チュートリアル"
+    ],
+    "ai": "none",
+    "duration": "10min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "howto_ep03",
+    "title": "AITuber Radio の使い方 #03「もっとリッチな番組を作るっす！」",
+    "tags": [
+      "AITuber Radio",
+      "使い方",
+      "チュートリアル"
+    ],
+    "ai": "none",
+    "duration": "10min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "news_morning",
+    "title": "怪談ちゃんの朝イチニュース",
+    "tags": [
+      "朝",
+      "ニュース",
+      "天気",
+      "AI",
+      "自動生成"
+    ],
+    "ai": "required",
+    "duration": "15min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "ohayou",
+    "title": "怪談ちゃんのおはようラジオ",
+    "tags": [
+      "朝",
+      "豆知識",
+      "元気",
+      "AI"
+    ],
+    "ai": "required",
+    "duration": "30min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "python_ep01",
+    "title": "はじめてのPython #01「Pythonって何っすか？」",
+    "tags": [
+      "Python",
+      "プログラミング",
+      "学習",
+      "初心者",
+      "シリーズ"
+    ],
+    "ai": "none",
+    "duration": "10min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "python_ep02",
+    "title": "はじめてのPython #02「もしも…ってやつっす！」",
+    "tags": [
+      "Python",
+      "プログラミング",
+      "学習",
+      "初心者",
+      "シリーズ"
+    ],
+    "ai": "none",
+    "duration": "10min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "python_ep03",
+    "title": "はじめてのPython #03「ぐるぐる回すっす！」",
+    "tags": [
+      "PYTHON",
+      "学習",
+      "初心者",
+      "シリーズ"
+    ],
+    "ai": "none",
+    "duration": "10min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "python_ep04",
+    "title": "はじめてのPython #04「データをまとめて管理するっす！」",
+    "tags": [
+      "PYTHON",
+      "学習",
+      "初心者",
+      "シリーズ"
+    ],
+    "ai": "none",
+    "duration": "10min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "short_trivia",
+    "title": "知らないと損する雑学60秒",
+    "tags": [
+      "ショート",
+      "雑学",
+      "全台本",
+      "縦動画"
+    ],
+    "ai": "none",
+    "duration": "1min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "sql_ep01",
+    "title": "はじめてのSQL #01「データベースってなんっすか？」",
+    "tags": [
+      "SQL",
+      "データベース",
+      "学習",
+      "初心者",
+      "シリーズ"
+    ],
+    "ai": "none",
+    "duration": "12min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "sql_ep02",
+    "title": "はじめてのSQL #02「データを追加・更新・削除するっす！」",
+    "tags": [
+      "SQL",
+      "データベース",
+      "学習",
+      "初心者",
+      "シリーズ"
+    ],
+    "ai": "none",
+    "duration": "10min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "sql_ep03",
+    "title": "はじめてのSQL #03「数えて足して平均して！」",
+    "tags": [
+      "SQL",
+      "学習",
+      "初心者",
+      "シリーズ"
+    ],
+    "ai": "none",
+    "duration": "10min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "sql_ep03b",
+    "title": "はじめてのSQL 特別回「集計関数、こう使うっす！」",
+    "tags": [
+      "SQL",
+      "学習",
+      "実例",
+      "シリーズ"
+    ],
+    "ai": "none",
+    "duration": "10min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "sql_ep04",
+    "title": "はじめてのSQL #04「テーブルをくっつけるっす！」",
+    "tags": [
+      "SQL",
+      "学習",
+      "初心者",
+      "シリーズ"
+    ],
+    "ai": "none",
+    "duration": "10min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "sql_ep04b",
+    "title": "はじめてのSQL 特別回「JOINでこんなことができるっす！」",
+    "tags": [
+      "SQL",
+      "学習",
+      "実例",
+      "シリーズ"
+    ],
+    "ai": "none",
+    "duration": "10min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "tabi_hokkaido",
+    "title": "旅ラジオ 〜北海道編〜",
+    "tags": [
+      "旅",
+      "北海道",
+      "全台本",
+      "グルメ"
+    ],
+    "ai": "none",
+    "duration": "10min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "tabi_kyoto",
+    "title": "旅ラジオ 〜京都編〜",
+    "tags": [
+      "旅",
+      "京都",
+      "全台本",
+      "グルメ"
+    ],
+    "ai": "none",
+    "duration": "10min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "tabi_okinawa",
+    "title": "旅ラジオ 〜沖縄編〜",
+    "tags": [
+      "旅",
+      "沖縄",
+      "全台本",
+      "グルメ"
+    ],
+    "ai": "none",
+    "duration": "10min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "voice_catalog",
+    "title": "VOICEVOX音色カタログ",
+    "tags": [
+      "VOICEVOX",
+      "全台本",
+      "カタログ"
+    ],
+    "ai": "none",
+    "duration": "20min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "yofukashi",
+    "title": "怪談ちゃんの夜更かしラジオ",
+    "tags": [
+      "雑談",
+      "深夜",
+      "フリートーク",
+      "AI"
+    ],
+    "ai": "required",
+    "duration": "30min",
+    "setlist": "setlist.md"
+  },
+  {
+    "id": "zatsugaku",
+    "title": "怪談ちゃんの雑学タイム",
+    "tags": [
+      "雑学",
+      "全台本",
+      "知識"
+    ],
+    "ai": "none",
+    "duration": "10min",
+    "setlist": "setlist.md"
+  }
+]
