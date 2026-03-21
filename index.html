@@ -128,6 +128,31 @@
       border: 1px solid rgba(76, 166, 255, 0.2);
     }
 
+    .category-tabs {
+      display: flex; gap: 8px; justify-content: center;
+      margin-bottom: 24px; flex-wrap: wrap;
+    }
+    .category-tab {
+      padding: 10px 24px; border-radius: 24px;
+      background: var(--surface); border: 1px solid var(--border);
+      color: var(--text-muted); font-size: 14px; font-weight: 500;
+      cursor: pointer; transition: all 0.2s;
+    }
+    .category-tab:hover {
+      border-color: var(--accent); color: var(--text);
+    }
+    .category-tab.active {
+      background: linear-gradient(135deg, var(--accent), #c73850);
+      border-color: transparent; color: white; font-weight: 600;
+      box-shadow: 0 2px 12px var(--accent-glow);
+    }
+    .category-title {
+      font-size: 20px; font-weight: 700; color: var(--text);
+      margin: 32px 0 16px; padding-left: 4px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .category-title:first-child { margin-top: 0; }
+
     .card-actions {
       display: flex; gap: 8px;
     }
@@ -255,6 +280,13 @@
     </div>
   </div>
 
+  <!-- Category Tabs -->
+  <div class="category-tabs" id="categoryTabs">
+    <button class="category-tab active" data-category="all">🎙️ すべて</button>
+    <button class="category-tab" data-category="radio">📻 ラジオ</button>
+    <button class="category-tab" data-category="learn">📚 学習</button>
+  </div>
+
   <!-- Cards -->
   <div class="cards" id="cardList">
     <div style="text-align:center;color:#555;padding:20px">カードを読み込み中...</div>
@@ -283,7 +315,17 @@
     }
 
     const CARDS_DIR = 'cards'
-    const CARD_IDS = ['news_morning', 'yofukashi', 'ohayou', 'hitorigoto', 'zatsugaku', 'history', 'tabi_kyoto', 'tabi_okinawa', 'tabi_hokkaido', 'voice_catalog', 'hirumachi', 'short_trivia', 'asmr_zenkoutei', 'python_ep01', 'python_ep02', 'sql_ep01', 'sql_ep02']
+    const CARD_CATEGORIES = {
+      radio: {
+        label: '📻 ラジオ',
+        ids: ['news_morning', 'yofukashi', 'ohayou', 'hitorigoto', 'zatsugaku', 'history', 'tabi_kyoto', 'tabi_okinawa', 'tabi_hokkaido', 'voice_catalog', 'hirumachi', 'short_trivia', 'asmr_zenkoutei']
+      },
+      learn: {
+        label: '📚 学習',
+        ids: ['python_ep01', 'python_ep02', 'sql_ep01', 'sql_ep02']
+      }
+    }
+    const CARD_IDS = Object.values(CARD_CATEGORIES).flatMap(c => c.ids)
 
     const CREDITS_ALL = [
       { file: 'jingle1.mp3', title: 'O Chanukah (Instrumental)', artist: 'Jingle Punks', source: 'YouTube Audio Library' },
@@ -484,24 +526,59 @@
       if (e.key === 'Enter') tryConnect(extIdInput.value.trim())
     })
 
-    // ============================================
-    // カード読み込み & 描画
-    // ============================================
+    // カードデータキャッシュ
+    const cardDataCache = {}
+
     async function loadCards() {
       const container = document.getElementById('cardList')
       container.innerHTML = ''
 
+      // 全カードをプリロード
       for (const id of CARD_IDS) {
         try {
           const res = await fetch(`${CARDS_DIR}/${id}/card.json`)
-          const card = await res.json()
-          container.appendChild(createCardElement(card, id))
+          cardDataCache[id] = await res.json()
         } catch (e) {
-          // file:// プロトコルでは fetch できないのでフォールバック
           if (FALLBACK_CARDS[id]) {
-            container.appendChild(createCardElement(FALLBACK_CARDS[id], id))
+            cardDataCache[id] = FALLBACK_CARDS[id]
           } else {
             console.error(`Failed to load card ${id}:`, e)
+          }
+        }
+      }
+
+      renderCards('all')
+
+      // タブ切替イベント
+      document.querySelectorAll('.category-tab').forEach(tab => {
+        tab.addEventListener('click', () => {
+          document.querySelectorAll('.category-tab').forEach(t => t.classList.remove('active'))
+          tab.classList.add('active')
+          renderCards(tab.dataset.category)
+        })
+      })
+    }
+
+    function renderCards(filter) {
+      const container = document.getElementById('cardList')
+      container.innerHTML = ''
+
+      const categoriesToShow = filter === 'all'
+        ? Object.entries(CARD_CATEGORIES)
+        : Object.entries(CARD_CATEGORIES).filter(([key]) => key === filter)
+
+      for (const [catKey, cat] of categoriesToShow) {
+        // カテゴリヘッダー（「すべて」表示時のみ）
+        if (filter === 'all') {
+          const header = document.createElement('div')
+          header.className = 'category-title'
+          header.textContent = cat.label
+          container.appendChild(header)
+        }
+
+        for (const id of cat.ids) {
+          if (cardDataCache[id]) {
+            container.appendChild(createCardElement(cardDataCache[id], id))
           }
         }
       }
