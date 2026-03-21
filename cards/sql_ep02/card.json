@@ -1,0 +1,18 @@
+{
+  "id": "sql_ep02",
+  "title": "はじめてのSQL #02「データを追加・更新・削除するっす！」",
+  "author": "k3peta",
+  "description": "怪談ちゃんがSQLをゼロから教える学習ポッドキャスト。第2回はINSERT, UPDATE, DELETEとWHERE忘れの恐怖。",
+  "duration": "10min",
+  "ai": "none",
+  "tags": ["SQL", "データベース", "学習", "初心者", "シリーズ"],
+  "series": "はじめてのSQL",
+  "episode": 2,
+  "setlist": "setlist.md",
+  "media": {
+    "media/bgm.mp3": "assets/bgm.mp3"
+  },
+  "credits": [
+    { "file": "bgm.mp3", "title": "Et Voila", "artist": "Chris Haugen", "source": "YouTube Audio Library" }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "python_ep02",
+  "title": "はじめてのPython #02「もしも…ってやつっす！」",
+  "author": "k3peta",
+  "description": "怪談ちゃんがゼロからPythonを教える学習ポッドキャスト。第2回はif文、elif、else、比較演算子、and/or。",
+  "duration": "10min",
+  "ai": "none",
+  "tags": ["Python", "プログラミング", "学習", "初心者", "シリーズ"],
+  "series": "はじめてのPython",
+  "episode": 2,
+  "setlist": "setlist.md",
+  "media": {
+    "media/bgm.mp3": "assets/bgm.mp3"
+  },
+  "credits": [
+    { "file": "bgm.mp3", "title": "Et Voila", "artist": "Chris Haugen", "source": "YouTube Audio Library" }
+  ]
+}
