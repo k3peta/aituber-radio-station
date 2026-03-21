@@ -7,7 +7,7 @@ pause_between: 800
 
 # オープニング
 [type: talk]
-[bgm: media/bgm_chill.mp3]
+[bgm: media/bgm.mp3]
 [volume: 0.2]
 
 はいっ！怪談ちゃんのはじめてのPython、第1回っす！ {はいっ！怪談ちゃんのはじめてのパイソン、第1回っす！}
