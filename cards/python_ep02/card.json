@@ -10,7 +10,8 @@
   "episode": 2,
   "setlist": "setlist.md",
   "media": {
-    "media/bgm.mp3": "assets/bgm.mp3"
+    "media/bgm.mp3": "assets/bgm.mp3",
+    "media/slide_if_elif_else.png": "assets/slide_if_elif_else.png"
   },
   "credits": [
     { "file": "bgm.mp3", "title": "Et Voila", "artist": "Chris Haugen", "source": "YouTube Audio Library" }

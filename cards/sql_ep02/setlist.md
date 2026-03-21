@@ -88,7 +88,7 @@ WHEREは命綱っすよ、先輩。 {ウェアは命綱っすよ、先輩。}
 
 # 今日のまとめ
 [type: talk]
-
+[float: media/slide_insert_update_delete.png]
 はいっ、第2回のまとめっす。
 
 今日やったのは、
@@ -101,6 +101,7 @@ WHEREは命綱っすよ、先輩。 {ウェアは命綱っすよ、先輩。}
 
 # エンディング
 [type: talk]
+[float: none]
 [bgm: none]
 
 次回は集計関数っす。COUNTとかSUMとかAVGとかっす。 {次回は集計関数っす。カウントとかサムとかアベレージとかっす。}

@@ -114,6 +114,7 @@ ifで結果を振り分けてるっす。
 
 # 今日のまとめ
 [type: talk]
+[float: media/slide_if_elif_else.png]
 
 はいっ！第2回のまとめっす。
 
@@ -128,6 +129,7 @@ ifで結果を振り分けてるっす。
 
 # エンディング
 [type: talk]
+[float: none]
 [bgm: none]
 
 次回はループっす。forとwhileっす。 {次回はループっす。フォーとワイルっす。}
