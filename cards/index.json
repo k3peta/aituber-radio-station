@@ -2,6 +2,10 @@
   {
     "id": "asmr_zenkoutei",
     "title": "全肯定おやすみASMR",
+    "author": "k3peta",
+    "description": "全部肯定してあげる。頭なでなで、ささやき、耳かき。ジムノペディの優しい音色に包まれて、おやすみなさい。",
+    "duration": "15min",
+    "ai": "none",
     "tags": [
       "ASMR",
       "癒し",
@@ -9,13 +13,77 @@
       "おやすみ",
       "耳かき"
     ],
-    "ai": "none",
-    "duration": "15min",
-    "setlist": "setlist.md"
+    "setlist": "setlist.md",
+    "media": {
+      "media/bgm_gymnopedie.mp3": "assets/bgm_gymnopedie.mp3",
+      "media/se_mimikaki_R.wav": "assets/se_mimikaki_R.wav",
+      "media/se_mimikaki_L.wav": "assets/se_mimikaki_L.wav"
+    },
+    "credits": [
+      {
+        "file": "bgm_gymnopedie.mp3",
+        "title": "Gymnopedie No.1",
+        "artist": "Erik Satie",
+        "source": "YouTube Audio Library",
+        "license": "Public Domain"
+      },
+      {
+        "file": "se_mimikaki_R.wav",
+        "title": "耳かき音010 コットンと綿棒 (R)",
+        "artist": "川端ちよ",
+        "source": "DIMENSHOP 素材部",
+        "url": "https://oblsk.sakura.ne.jp/3d/?p=474"
+      },
+      {
+        "file": "se_mimikaki_L.wav",
+        "title": "耳かき音010 コットンと綿棒 (L)",
+        "artist": "川端ちよ",
+        "source": "DIMENSHOP 素材部",
+        "url": "https://oblsk.sakura.ne.jp/3d/?p=474"
+      }
+    ]
+  },
+  {
+    "id": "gesture_demo_duo",
+    "title": "🎭 ジェスチャーデモ（デュオ）",
+    "description": "怪談ちゃんとずんだもんが感情豊かに掛け合い！2キャラのジェスチャー連動デモ",
+    "category": "demo",
+    "duration": "4min",
+    "speakers": [
+      38,
+      3
+    ],
+    "tags": [
+      "デモ",
+      "ジェスチャー",
+      "デュオ",
+      "掛け合い"
+    ],
+    "version": "1.0"
+  },
+  {
+    "id": "gesture_demo_solo",
+    "title": "🎭 ジェスチャーデモ（ソロ）",
+    "description": "感情に連動した15種類のジェスチャーポーズを怪談ちゃんが全力で披露するデモ番組",
+    "category": "demo",
+    "duration": "3min",
+    "speakers": [
+      38
+    ],
+    "tags": [
+      "デモ",
+      "ジェスチャー",
+      "ポーズ"
+    ],
+    "version": "1.0"
   },
   {
     "id": "git_ep01",
     "title": "はじめてのGit #01「バージョン管理って何っすか？」",
+    "author": "k3peta",
+    "description": "怪談ちゃんがゼロから教えるGit入門。第1回はバージョン管理の概念、GitとGitHubの違い、リポジトリ、基本の3ステップ。",
+    "duration": "10min",
+    "ai": "none",
     "tags": [
       "Git",
       "GitHub",
@@ -23,13 +91,29 @@
       "初心者",
       "シリーズ"
     ],
-    "ai": "none",
-    "duration": "10min",
-    "setlist": "setlist.md"
+    "series": "はじめてのGit",
+    "episode": 1,
+    "setlist": "setlist.md",
+    "media": {
+      "media/bgm.mp3": "assets/bgm.mp3",
+      "media/slide_git_basics.png": "assets/slide_git_basics.png"
+    },
+    "credits": [
+      {
+        "file": "bgm.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "git_ep02",
     "title": "はじめてのGit #02「実際に使ってみるっす！」",
+    "author": "k3peta",
+    "description": "怪談ちゃんがゼロから教えるGit入門。第2回はinit,add,commit,status,log,pushの実践コマンド操作。",
+    "duration": "10min",
+    "ai": "none",
     "tags": [
       "Git",
       "GitHub",
@@ -37,87 +121,228 @@
       "初心者",
       "シリーズ"
     ],
-    "ai": "none",
-    "duration": "10min",
-    "setlist": "setlist.md"
+    "series": "はじめてのGit",
+    "episode": 2,
+    "setlist": "setlist.md",
+    "media": {
+      "media/bgm.mp3": "assets/bgm.mp3",
+      "media/slide_git_commands.png": "assets/slide_git_commands.png"
+    },
+    "credits": [
+      {
+        "file": "bgm.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "hirumachi",
     "title": "怪談ちゃんのひるまちラジオ",
+    "author": "k3peta",
+    "description": "お便り紹介、気になる話題、ゆるい独り言。お昼のまったりタイムにお届けする雑談ラジオ。",
+    "duration": "15min",
+    "ai": "none",
     "tags": [
       "雑談",
       "お便り",
       "全台本",
       "昼"
     ],
-    "ai": "none",
-    "duration": "15min",
-    "setlist": "setlist.md"
+    "setlist": "setlist.md",
+    "media": {
+      "media/jingle1.mp3": "assets/jingle1.mp3",
+      "media/jingle2.mp3": "assets/jingle2.mp3",
+      "media/bgm_chill.mp3": "assets/bgm_chill.mp3",
+      "media/opening.jpg": "assets/opening.jpg",
+      "media/ending.jpg": "assets/ending.jpg"
+    },
+    "credits": [
+      {
+        "file": "jingle1.mp3",
+        "title": "O Chanukah (Instrumental)",
+        "artist": "Jingle Punks",
+        "source": "YouTube Audio Library"
+      },
+      {
+        "file": "jingle2.mp3",
+        "title": "Jingle Bells",
+        "artist": "The Soundlings",
+        "source": "YouTube Audio Library"
+      },
+      {
+        "file": "bgm_chill.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "history",
     "title": "怪談ちゃんのなるほどヒストリー",
+    "author": "k3peta",
+    "description": "教科書には載らない歴史の裏話！古代ローマから戦国時代、偶然の大発明、江戸の知恵まで。AI不要の全台本番組。",
+    "duration": "10min",
+    "ai": "none",
     "tags": [
       "歴史",
       "全台本",
       "知識"
     ],
-    "ai": "none",
-    "duration": "10min",
-    "setlist": "setlist.md"
+    "setlist": "setlist.md",
+    "media": {
+      "media/jingle1.mp3": "assets/jingle1.mp3",
+      "media/jingle2.mp3": "assets/jingle2.mp3",
+      "media/bgm_chill.mp3": "assets/bgm_chill.mp3",
+      "media/opening.jpg": "assets/opening.jpg",
+      "media/ending.jpg": "assets/ending.jpg"
+    },
+    "credits": [
+      {
+        "file": "jingle1.mp3",
+        "title": "O Chanukah (Instrumental)",
+        "artist": "Jingle Punks",
+        "source": "YouTube Audio Library"
+      },
+      {
+        "file": "jingle2.mp3",
+        "title": "Jingle Bells",
+        "artist": "The Soundlings",
+        "source": "YouTube Audio Library"
+      },
+      {
+        "file": "bgm_chill.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "hitorigoto",
     "title": "真夜中のひとりごと",
+    "author": "k3peta",
+    "description": "深夜のしっとり一人語り。時間・記憶・夢・音など哲学的な話題をゆったりペースで。",
+    "duration": "30min",
+    "ai": "required",
     "tags": [
       "深夜",
       "哲学",
       "しっとり",
       "AI"
     ],
-    "ai": "required",
-    "duration": "30min",
-    "setlist": "setlist.md"
+    "setlist": "setlist.md",
+    "media": {
+      "media/jingle1.mp3": "assets/jingle1.mp3",
+      "media/bgm_chill.mp3": "assets/bgm_chill.mp3",
+      "media/opening.jpg": "assets/opening.jpg",
+      "media/ending.jpg": "assets/ending.jpg"
+    },
+    "credits": [
+      {
+        "file": "jingle1.mp3",
+        "title": "O Chanukah (Instrumental)",
+        "artist": "Jingle Punks",
+        "source": "YouTube Audio Library"
+      },
+      {
+        "file": "bgm_chill.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "howto_ep01",
     "title": "AITuber Radio の使い方 #01「はじめてのセットアップっす！」",
+    "author": "k3peta",
+    "description": "怪談ちゃんが教えるAITuber Radio使い方講座。セットアップガイド。VOICEVOX、拡張機能インストール、VRM読み込み、初回再生テスト。",
+    "duration": "10min",
+    "ai": "none",
     "tags": [
       "AITuber Radio",
       "使い方",
       "チュートリアル"
     ],
-    "ai": "none",
-    "duration": "10min",
-    "setlist": "setlist.md"
+    "series": "AITuber Radio の使い方",
+    "episode": 1,
+    "setlist": "setlist.md",
+    "media": {
+      "media/bgm.mp3": "assets/bgm.mp3"
+    },
+    "credits": [
+      {
+        "file": "bgm.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "howto_ep02",
     "title": "AITuber Radio の使い方 #02「台本を書いてみるっす！」",
+    "author": "k3peta",
+    "description": "怪談ちゃんが教えるAITuber Radio使い方講座。シナリオ作成入門。セットリスト構文、読み指定、話者設定、再生方法。",
+    "duration": "10min",
+    "ai": "none",
     "tags": [
       "AITuber Radio",
       "使い方",
       "チュートリアル"
     ],
-    "ai": "none",
-    "duration": "10min",
-    "setlist": "setlist.md"
+    "series": "AITuber Radio の使い方",
+    "episode": 2,
+    "setlist": "setlist.md",
+    "media": {
+      "media/bgm.mp3": "assets/bgm.mp3"
+    },
+    "credits": [
+      {
+        "file": "bgm.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "howto_ep03",
     "title": "AITuber Radio の使い方 #03「もっとリッチな番組を作るっす！」",
+    "author": "k3peta",
+    "description": "怪談ちゃんが教えるAITuber Radio使い方講座。BGM、ジングル、フロート画像、感情タグ、AIで読み・感情を自動生成するtips。",
+    "duration": "10min",
+    "ai": "none",
     "tags": [
       "AITuber Radio",
       "使い方",
       "チュートリアル"
     ],
-    "ai": "none",
-    "duration": "10min",
-    "setlist": "setlist.md"
+    "series": "AITuber Radio の使い方",
+    "episode": 3,
+    "setlist": "setlist.md",
+    "media": {
+      "media/bgm.mp3": "assets/bgm.mp3"
+    },
+    "credits": [
+      {
+        "file": "bgm.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "news_morning",
     "title": "怪談ちゃんの朝イチニュース",
+    "author": "k3peta",
+    "description": "AIがリアルタイム取得したニュース・天気・今日は何の日を怪談ちゃんがお届け。毎日異なる内容の情報番組。",
+    "duration": "15min",
+    "ai": "required",
     "tags": [
       "朝",
       "ニュース",
@@ -125,26 +350,84 @@
       "AI",
       "自動生成"
     ],
-    "ai": "required",
-    "duration": "15min",
-    "setlist": "setlist.md"
+    "setlist": "setlist.md",
+    "media": {
+      "media/jingle1.mp3": "assets/jingle1.mp3",
+      "media/jingle2.mp3": "assets/jingle2.mp3",
+      "media/bgm_chill.mp3": "assets/bgm_chill.mp3",
+      "media/opening.jpg": "assets/opening.jpg",
+      "media/ending.jpg": "assets/ending.jpg"
+    },
+    "credits": [
+      {
+        "file": "jingle1.mp3",
+        "title": "O Chanukah (Instrumental)",
+        "artist": "Jingle Punks",
+        "source": "YouTube Audio Library"
+      },
+      {
+        "file": "jingle2.mp3",
+        "title": "Jingle Bells",
+        "artist": "The Soundlings",
+        "source": "YouTube Audio Library"
+      },
+      {
+        "file": "bgm_chill.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "ohayou",
     "title": "怪談ちゃんのおはようラジオ",
+    "author": "k3peta",
+    "description": "朝のテンション高めトーク × 豆知識 × ライフハック。元気をもらえる朝の情報バラエティ。",
+    "duration": "30min",
+    "ai": "required",
     "tags": [
       "朝",
       "豆知識",
       "元気",
       "AI"
     ],
-    "ai": "required",
-    "duration": "30min",
-    "setlist": "setlist.md"
+    "setlist": "setlist.md",
+    "media": {
+      "media/jingle1.mp3": "assets/jingle1.mp3",
+      "media/jingle2.mp3": "assets/jingle2.mp3",
+      "media/bgm_chill.mp3": "assets/bgm_chill.mp3",
+      "media/opening.jpg": "assets/opening.jpg",
+      "media/ending.jpg": "assets/ending.jpg"
+    },
+    "credits": [
+      {
+        "file": "jingle1.mp3",
+        "title": "O Chanukah (Instrumental)",
+        "artist": "Jingle Punks",
+        "source": "YouTube Audio Library"
+      },
+      {
+        "file": "jingle2.mp3",
+        "title": "Jingle Bells",
+        "artist": "The Soundlings",
+        "source": "YouTube Audio Library"
+      },
+      {
+        "file": "bgm_chill.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "python_ep01",
     "title": "はじめてのPython #01「Pythonって何っすか？」",
+    "author": "k3peta",
+    "description": "怪談ちゃんがゼロからPythonを教える学習ポッドキャスト。第1回はインストール、Hello World、変数、計算。",
+    "duration": "10min",
+    "ai": "none",
     "tags": [
       "Python",
       "プログラミング",
@@ -152,13 +435,29 @@
       "初心者",
       "シリーズ"
     ],
-    "ai": "none",
-    "duration": "10min",
-    "setlist": "setlist.md"
+    "series": "はじめてのPython",
+    "episode": 1,
+    "setlist": "setlist.md",
+    "media": {
+      "media/bgm.mp3": "assets/bgm.mp3",
+      "media/slide_basics.png": "assets/slide_basics.png"
+    },
+    "credits": [
+      {
+        "file": "bgm.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "python_ep02",
     "title": "はじめてのPython #02「もしも…ってやつっす！」",
+    "author": "k3peta",
+    "description": "怪談ちゃんがゼロからPythonを教える学習ポッドキャスト。第2回はif文、elif、else、比較演算子、and/or。",
+    "duration": "10min",
+    "ai": "none",
     "tags": [
       "Python",
       "プログラミング",
@@ -166,52 +465,123 @@
       "初心者",
       "シリーズ"
     ],
-    "ai": "none",
-    "duration": "10min",
-    "setlist": "setlist.md"
+    "series": "はじめてのPython",
+    "episode": 2,
+    "setlist": "setlist.md",
+    "media": {
+      "media/bgm.mp3": "assets/bgm.mp3",
+      "media/slide_if_elif_else.png": "assets/slide_if_elif_else.png"
+    },
+    "credits": [
+      {
+        "file": "bgm.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "python_ep03",
     "title": "はじめてのPython #03「ぐるぐる回すっす！」",
+    "author": "k3peta",
+    "description": "怪談ちゃんがゼロから教える学習ポッドキャスト。第3回はforループ,whileループ,range,break,continue,九九プログラム。",
+    "duration": "10min",
+    "ai": "none",
     "tags": [
       "PYTHON",
       "学習",
       "初心者",
       "シリーズ"
     ],
-    "ai": "none",
-    "duration": "10min",
-    "setlist": "setlist.md"
+    "series": "はじめてのPython",
+    "episode": 3,
+    "setlist": "setlist.md",
+    "media": {
+      "media/bgm.mp3": "assets/bgm.mp3",
+      "media/slide_loops.png": "assets/slide_loops.png"
+    },
+    "credits": [
+      {
+        "file": "bgm.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "python_ep04",
     "title": "はじめてのPython #04「データをまとめて管理するっす！」",
+    "author": "k3peta",
+    "description": "怪談ちゃんがゼロから教える学習ポッドキャスト。第4回はリスト。作成,インデックス,追加,削除,スライス,forとの組み合わせ。",
+    "duration": "10min",
+    "ai": "none",
     "tags": [
       "PYTHON",
       "学習",
       "初心者",
       "シリーズ"
     ],
-    "ai": "none",
-    "duration": "10min",
-    "setlist": "setlist.md"
+    "series": "はじめてのPython",
+    "episode": 4,
+    "setlist": "setlist.md",
+    "media": {
+      "media/bgm.mp3": "assets/bgm.mp3",
+      "media/slide_list.png": "assets/slide_list.png"
+    },
+    "credits": [
+      {
+        "file": "bgm.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "short_trivia",
     "title": "知らないと損する雑学60秒",
+    "author": "k3peta",
+    "description": "バズる雑学を60秒でお届け！TikTok/Reels向け縦動画サンプル。",
+    "duration": "1min",
+    "ai": "none",
     "tags": [
       "ショート",
       "雑学",
       "全台本",
       "縦動画"
     ],
-    "ai": "none",
-    "duration": "1min",
-    "setlist": "setlist.md"
+    "setlist": "setlist.md",
+    "media": {
+      "media/jingle1.mp3": "assets/jingle1.mp3",
+      "media/jingle2.mp3": "assets/jingle2.mp3",
+      "media/bgm_chill.mp3": "assets/bgm_chill.mp3",
+      "media/opening.jpg": "assets/opening.jpg",
+      "media/ending.jpg": "assets/ending.jpg"
+    },
+    "credits": [
+      {
+        "file": "jingle2.mp3",
+        "title": "Jingle Bells",
+        "artist": "The Soundlings",
+        "source": "YouTube Audio Library"
+      },
+      {
+        "file": "bgm_chill.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "sql_ep01",
     "title": "はじめてのSQL #01「データベースってなんっすか？」",
+    "author": "k3peta",
+    "description": "怪談ちゃんがSQLをゼロから教える学習ポッドキャスト。第1回はデータベースの基本、SELECT、WHERE、ORDER BY。",
+    "duration": "12min",
+    "ai": "none",
     "tags": [
       "SQL",
       "データベース",
@@ -219,13 +589,29 @@
       "初心者",
       "シリーズ"
     ],
-    "ai": "none",
-    "duration": "12min",
-    "setlist": "setlist.md"
+    "series": "はじめてのSQL",
+    "episode": 1,
+    "setlist": "setlist.md",
+    "media": {
+      "media/bgm.mp3": "assets/bgm.mp3",
+      "media/slide_select.png": "assets/slide_select.png"
+    },
+    "credits": [
+      {
+        "file": "bgm.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "sql_ep02",
     "title": "はじめてのSQL #02「データを追加・更新・削除するっす！」",
+    "author": "k3peta",
+    "description": "怪談ちゃんがSQLをゼロから教える学習ポッドキャスト。第2回はINSERT, UPDATE, DELETEとWHERE忘れの恐怖。",
+    "duration": "10min",
+    "ai": "none",
     "tags": [
       "SQL",
       "データベース",
@@ -233,136 +619,390 @@
       "初心者",
       "シリーズ"
     ],
-    "ai": "none",
-    "duration": "10min",
-    "setlist": "setlist.md"
+    "series": "はじめてのSQL",
+    "episode": 2,
+    "setlist": "setlist.md",
+    "media": {
+      "media/bgm.mp3": "assets/bgm.mp3",
+      "media/slide_insert_update_delete.png": "assets/slide_insert_update_delete.png"
+    },
+    "credits": [
+      {
+        "file": "bgm.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "sql_ep03",
     "title": "はじめてのSQL #03「数えて足して平均して！」",
+    "author": "k3peta",
+    "description": "怪談ちゃんがゼロから教える学習ポッドキャスト。第3回は集計関数COUNT,SUM,AVG,MIN,MAX,GROUP BY,HAVING。",
+    "duration": "10min",
+    "ai": "none",
     "tags": [
       "SQL",
       "学習",
       "初心者",
       "シリーズ"
     ],
-    "ai": "none",
-    "duration": "10min",
-    "setlist": "setlist.md"
+    "series": "はじめてのSQL",
+    "episode": 3,
+    "setlist": "setlist.md",
+    "media": {
+      "media/bgm.mp3": "assets/bgm.mp3",
+      "media/slide_aggregate.png": "assets/slide_aggregate.png"
+    },
+    "credits": [
+      {
+        "file": "bgm.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "sql_ep03b",
     "title": "はじめてのSQL 特別回「集計関数、こう使うっす！」",
+    "author": "k3peta",
+    "description": "集計関数の実例集。売上合計、月別推移、ランキング、HAVING活用など実務的なSQL分析パターン。",
+    "duration": "10min",
+    "ai": "none",
     "tags": [
       "SQL",
       "学習",
       "実例",
       "シリーズ"
     ],
-    "ai": "none",
-    "duration": "10min",
-    "setlist": "setlist.md"
+    "series": "はじめてのSQL",
+    "episode": 3.5,
+    "setlist": "setlist.md",
+    "media": {
+      "media/bgm.mp3": "assets/bgm.mp3",
+      "media/slide_aggregate_examples.png": "assets/slide_aggregate_examples.png"
+    },
+    "credits": [
+      {
+        "file": "bgm.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "sql_ep04",
     "title": "はじめてのSQL #04「テーブルをくっつけるっす！」",
+    "author": "k3peta",
+    "description": "怪談ちゃんがゼロから教える学習ポッドキャスト。第4回はJOIN。INNER JOIN,LEFT JOIN,エイリアス,複数テーブル結合。",
+    "duration": "10min",
+    "ai": "none",
     "tags": [
       "SQL",
       "学習",
       "初心者",
       "シリーズ"
     ],
-    "ai": "none",
-    "duration": "10min",
-    "setlist": "setlist.md"
+    "series": "はじめてのSQL",
+    "episode": 4,
+    "setlist": "setlist.md",
+    "media": {
+      "media/bgm.mp3": "assets/bgm.mp3",
+      "media/slide_join.png": "assets/slide_join.png",
+      "media/slide_inner_join.png": "assets/slide_inner_join.png",
+      "media/slide_left_join.png": "assets/slide_left_join.png"
+    },
+    "credits": [
+      {
+        "file": "bgm.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "sql_ep04b",
     "title": "はじめてのSQL 特別回「JOINでこんなことができるっす！」",
+    "author": "k3peta",
+    "description": "JOINの実例集。3テーブル結合、未注文ユーザー検出、集計との組み合わせ、セルフJOIN。",
+    "duration": "10min",
+    "ai": "none",
     "tags": [
       "SQL",
       "学習",
       "実例",
       "シリーズ"
     ],
-    "ai": "none",
-    "duration": "10min",
-    "setlist": "setlist.md"
+    "series": "はじめてのSQL",
+    "episode": 4.5,
+    "setlist": "setlist.md",
+    "media": {
+      "media/bgm.mp3": "assets/bgm.mp3",
+      "media/slide_join.png": "assets/slide_join.png",
+      "media/slide_inner_join.png": "assets/slide_inner_join.png",
+      "media/slide_left_join.png": "assets/slide_left_join.png"
+    },
+    "credits": [
+      {
+        "file": "bgm.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "tabi_hokkaido",
     "title": "旅ラジオ 〜北海道編〜",
+    "author": "k3peta",
+    "description": "大自然、海鮮グルメ、秘湯温泉。北海道の魅力を10分でぎゅっと語る旅番組。",
+    "duration": "10min",
+    "ai": "none",
     "tags": [
       "旅",
       "北海道",
       "全台本",
       "グルメ"
     ],
-    "ai": "none",
-    "duration": "10min",
-    "setlist": "setlist.md"
+    "setlist": "setlist.md",
+    "media": {
+      "media/jingle1.mp3": "assets/jingle1.mp3",
+      "media/jingle2.mp3": "assets/jingle2.mp3",
+      "media/bgm_chill.mp3": "assets/bgm_chill.mp3",
+      "media/opening.jpg": "assets/opening.jpg",
+      "media/ending.jpg": "assets/ending.jpg"
+    },
+    "credits": [
+      {
+        "file": "jingle1.mp3",
+        "title": "O Chanukah (Instrumental)",
+        "artist": "Jingle Punks",
+        "source": "YouTube Audio Library"
+      },
+      {
+        "file": "jingle2.mp3",
+        "title": "Jingle Bells",
+        "artist": "The Soundlings",
+        "source": "YouTube Audio Library"
+      },
+      {
+        "file": "bgm_chill.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "tabi_kyoto",
     "title": "旅ラジオ 〜京都編〜",
+    "author": "k3peta",
+    "description": "路地裏散歩、おばんざい、穴場スポット。京都の魅力を10分でぎゅっと語る旅番組。",
+    "duration": "10min",
+    "ai": "none",
     "tags": [
       "旅",
       "京都",
       "全台本",
       "グルメ"
     ],
-    "ai": "none",
-    "duration": "10min",
-    "setlist": "setlist.md"
+    "setlist": "setlist.md",
+    "media": {
+      "media/jingle1.mp3": "assets/jingle1.mp3",
+      "media/jingle2.mp3": "assets/jingle2.mp3",
+      "media/bgm_chill.mp3": "assets/bgm_chill.mp3",
+      "media/opening.jpg": "assets/opening.jpg",
+      "media/ending.jpg": "assets/ending.jpg"
+    },
+    "credits": [
+      {
+        "file": "jingle1.mp3",
+        "title": "O Chanukah (Instrumental)",
+        "artist": "Jingle Punks",
+        "source": "YouTube Audio Library"
+      },
+      {
+        "file": "jingle2.mp3",
+        "title": "Jingle Bells",
+        "artist": "The Soundlings",
+        "source": "YouTube Audio Library"
+      },
+      {
+        "file": "bgm_chill.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "tabi_okinawa",
     "title": "旅ラジオ 〜沖縄編〜",
+    "author": "k3peta",
+    "description": "エメラルドグリーンの海、ソーキそば、島時間。沖縄の魅力を10分でぎゅっと語る旅番組。",
+    "duration": "10min",
+    "ai": "none",
     "tags": [
       "旅",
       "沖縄",
       "全台本",
       "グルメ"
     ],
-    "ai": "none",
-    "duration": "10min",
-    "setlist": "setlist.md"
+    "setlist": "setlist.md",
+    "media": {
+      "media/jingle1.mp3": "assets/jingle1.mp3",
+      "media/jingle2.mp3": "assets/jingle2.mp3",
+      "media/bgm_chill.mp3": "assets/bgm_chill.mp3",
+      "media/opening.jpg": "assets/opening.jpg",
+      "media/ending.jpg": "assets/ending.jpg"
+    },
+    "credits": [
+      {
+        "file": "jingle1.mp3",
+        "title": "O Chanukah (Instrumental)",
+        "artist": "Jingle Punks",
+        "source": "YouTube Audio Library"
+      },
+      {
+        "file": "jingle2.mp3",
+        "title": "Jingle Bells",
+        "artist": "The Soundlings",
+        "source": "YouTube Audio Library"
+      },
+      {
+        "file": "bgm_chill.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "voice_catalog",
     "title": "VOICEVOX音色カタログ",
+    "author": "k3peta",
+    "description": "VOICEVOXの全キャラクターの声を聴き比べ！セグメントごとに声が切り替わるカタログ番組。",
+    "duration": "20min",
+    "ai": "none",
     "tags": [
       "VOICEVOX",
       "全台本",
       "カタログ"
     ],
-    "ai": "none",
-    "duration": "20min",
-    "setlist": "setlist.md"
+    "setlist": "setlist.md",
+    "media": {
+      "media/jingle1.mp3": "assets/jingle1.mp3",
+      "media/jingle2.mp3": "assets/jingle2.mp3",
+      "media/bgm_chill.mp3": "assets/bgm_chill.mp3",
+      "media/opening.jpg": "assets/opening.jpg",
+      "media/ending.jpg": "assets/ending.jpg"
+    },
+    "credits": [
+      {
+        "file": "jingle1.mp3",
+        "title": "O Chanukah (Instrumental)",
+        "artist": "Jingle Punks",
+        "source": "YouTube Audio Library"
+      },
+      {
+        "file": "jingle2.mp3",
+        "title": "Jingle Bells",
+        "artist": "The Soundlings",
+        "source": "YouTube Audio Library"
+      },
+      {
+        "file": "bgm_chill.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "yofukashi",
     "title": "怪談ちゃんの夜更かしラジオ",
+    "author": "k3peta",
+    "description": "深夜のゆるい雑談 × リスナー交流。食べ物・趣味・お悩み相談などバラエティに富んだフリートーク番組。",
+    "duration": "30min",
+    "ai": "required",
     "tags": [
       "雑談",
       "深夜",
       "フリートーク",
       "AI"
     ],
-    "ai": "required",
-    "duration": "30min",
-    "setlist": "setlist.md"
+    "setlist": "setlist.md",
+    "media": {
+      "media/jingle1.mp3": "assets/jingle1.mp3",
+      "media/jingle2.mp3": "assets/jingle2.mp3",
+      "media/bgm_chill.mp3": "assets/bgm_chill.mp3",
+      "media/opening.jpg": "assets/opening.jpg",
+      "media/ending.jpg": "assets/ending.jpg"
+    },
+    "credits": [
+      {
+        "file": "jingle1.mp3",
+        "title": "O Chanukah (Instrumental)",
+        "artist": "Jingle Punks",
+        "source": "YouTube Audio Library"
+      },
+      {
+        "file": "jingle2.mp3",
+        "title": "Jingle Bells",
+        "artist": "The Soundlings",
+        "source": "YouTube Audio Library"
+      },
+      {
+        "file": "bgm_chill.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   },
   {
     "id": "zatsugaku",
     "title": "怪談ちゃんの雑学タイム",
+    "author": "k3peta",
+    "description": "知って楽しい雑学をたっぷりお届け！食べ物・動物・宇宙・日本語・人体の5テーマ。AI不要の全台本番組。",
+    "duration": "10min",
+    "ai": "none",
     "tags": [
       "雑学",
       "全台本",
       "知識"
     ],
-    "ai": "none",
-    "duration": "10min",
-    "setlist": "setlist.md"
+    "setlist": "setlist.md",
+    "media": {
+      "media/jingle1.mp3": "assets/jingle1.mp3",
+      "media/jingle2.mp3": "assets/jingle2.mp3",
+      "media/bgm_chill.mp3": "assets/bgm_chill.mp3",
+      "media/opening.jpg": "assets/opening.jpg",
+      "media/ending.jpg": "assets/ending.jpg"
+    },
+    "credits": [
+      {
+        "file": "jingle1.mp3",
+        "title": "O Chanukah (Instrumental)",
+        "artist": "Jingle Punks",
+        "source": "YouTube Audio Library"
+      },
+      {
+        "file": "jingle2.mp3",
+        "title": "Jingle Bells",
+        "artist": "The Soundlings",
+        "source": "YouTube Audio Library"
+      },
+      {
+        "file": "bgm_chill.mp3",
+        "title": "Et Voila",
+        "artist": "Chris Haugen",
+        "source": "YouTube Audio Library"
+      }
+    ]
   }
 ]

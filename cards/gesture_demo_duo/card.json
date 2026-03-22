@@ -1,0 +1,10 @@
+{
+  "id": "gesture_demo_duo",
+  "title": "🎭 ジェスチャーデモ（デュオ）",
+  "description": "怪談ちゃんとずんだもんが感情豊かに掛け合い！2キャラのジェスチャー連動デモ",
+  "category": "demo",
+  "duration": "4min",
+  "speakers": [38, 3],
+  "tags": ["デモ", "ジェスチャー", "デュオ", "掛け合い"],
+  "version": "1.0"
+}

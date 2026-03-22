@@ -1,0 +1,10 @@
+{
+  "id": "gesture_demo_solo",
+  "title": "🎭 ジェスチャーデモ（ソロ）",
+  "description": "感情に連動した15種類のジェスチャーポーズを怪談ちゃんが全力で披露するデモ番組",
+  "category": "demo",
+  "duration": "3min",
+  "speakers": [38],
+  "tags": ["デモ", "ジェスチャー", "ポーズ"],
+  "version": "1.0"
+}
