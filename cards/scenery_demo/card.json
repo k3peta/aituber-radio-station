@@ -1,0 +1,11 @@
+{
+  "id": "scenery_demo",
+  "title": "🏞️ ランダム風景トーク デモ",
+  "author": "k3peta",
+  "description": "Picsum Photos (CC-0/CC-BY) からランダム風景を次々表示し、怪談ちゃんが写真の印象を語るデモ番組。撮影者クレジットも自動表記。",
+  "duration": "5min",
+  "ai": "required",
+  "tags": ["デモ", "風景", "AI", "写真", "auto-scenery"],
+  "setlist": "setlist.md",
+  "background": "random"
+}

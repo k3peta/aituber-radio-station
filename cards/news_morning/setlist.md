@@ -82,6 +82,17 @@ pause_between: 1200
 [type: auto-weather]
 [bgm: media/bgm_chill.mp3]
 
+# つなぎトーク
+[type: talk]
+[emotion: relaxed]
+[intensity: 0.7]
+天気もチェックしたし、ここでちょっと一息つくっす。
+今日の風景コーナーっす！
+
+# 今日の風景
+[type: auto-scenery]
+[bgm: media/bgm_chill.mp3]
+
 # お便りコーナー
 [type: comments]
 [bgm: media/bgm_chill.mp3]
