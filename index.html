@@ -40,7 +40,7 @@
     .header h1 {
       font-size: 28px; font-weight: 800;
       background: linear-gradient(135deg, #fff, #e94560);
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
       margin-bottom: 8px;
     }
     .header p {
@@ -85,6 +85,17 @@
       transition: all 0.2s;
       position: relative;
       overflow: hidden;
+      scroll-margin-top: 24px;
+    }
+    .card.highlight {
+      border-color: var(--accent);
+      box-shadow: 0 0 24px var(--accent-glow);
+      animation: cardHighlight 2s ease;
+    }
+    @keyframes cardHighlight {
+      0% { box-shadow: 0 0 0 rgba(233,69,96,0); }
+      30% { box-shadow: 0 0 32px rgba(233,69,96,0.5); }
+      100% { box-shadow: 0 0 24px var(--accent-glow); }
     }
     .card::before {
       content: '';
@@ -286,6 +297,7 @@
     <button class="category-tab" data-category="radio">📻 ラジオ</button>
     <button class="category-tab" data-category="learn">📚 学習</button>
     <button class="category-tab" data-category="guide">📖 ガイド</button>
+    <button class="category-tab" data-category="demo">🎭 デモ</button>
     <button class="category-tab" data-category="other">🎵 その他</button>
   </div>
 
@@ -329,6 +341,10 @@
       guide: {
         label: '📖 ガイド',
         ids: ['howto_ep01', 'howto_ep02', 'howto_ep03']
+      },
+      demo: {
+        label: '🎭 デモ',
+        ids: ['gesture_demo_solo', 'gesture_demo_duo']
       },
       other: {
         label: '🎵 その他',
@@ -452,6 +468,18 @@
           { file: 'se_mimikaki_R.wav', title: '耳かき音010 (R)', artist: '川端ちよ', source: 'DIMENSHOP 素材部' },
           { file: 'se_mimikaki_L.wav', title: '耳かき音010 (L)', artist: '川端ちよ', source: 'DIMENSHOP 素材部' }
         ]
+      },
+      gesture_demo_solo: {
+        id: 'gesture_demo_solo', title: '🎭 ジェスチャーデモ（ソロ）', author: 'k3peta',
+        description: '感情に連動した15種類のジェスチャーポーズを怪談ちゃんが全力で披露するデモ番組',
+        duration: '3min', tags: ['デモ', 'ジェスチャー', 'ポーズ'], ai: 'none',
+        setlist: 'setlist.md'
+      },
+      gesture_demo_duo: {
+        id: 'gesture_demo_duo', title: '🎭 ジェスチャーデモ（デュオ）', author: 'k3peta',
+        description: '怪談ちゃんと後輩ちゃん（春日部つむぎ）が感情豊かに掛け合い！※VRMモデルは各自ご用意ください',
+        duration: '4min', tags: ['デモ', 'ジェスチャー', 'デュオ', '掛け合い'], ai: 'none',
+        setlist: 'setlist.md'
       },
       python_ep01: {
         id: 'python_ep01', title: 'はじめてのPython #01「Pythonって何っすか？」', author: 'k3peta',
@@ -601,6 +629,7 @@
     function createCardElement(card, id) {
       const el = document.createElement('div')
       el.className = 'card'
+      el.id = `card-${id}`
 
       const tagsHtml = (card.tags || []).filter(t => t !== 'AI').map(t => `<span class="tag">${t}</span>`).join('')
 
@@ -695,12 +724,29 @@
     // ============================================
     // 初期化
     // ============================================
+    // ハッシュリンクでカードにスクロール
+    function scrollToCardFromHash() {
+      const hash = location.hash.replace('#', '')
+      if (!hash) return
+      // card-xxx または直接 xxx
+      const targetId = hash.startsWith('card-') ? hash : `card-${hash}`
+      const el = document.getElementById(targetId)
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' })
+        el.classList.add('highlight')
+        setTimeout(() => el.classList.remove('highlight'), 4000)
+      }
+    }
+    window.addEventListener('hashchange', scrollToCardFromHash)
+
     ;(async () => {
       await loadCards()
       // 保存済みIDがあれば自動接続を試行
       if (EXTENSION_ID) {
         await tryConnect(EXTENSION_ID)
       }
+      // ハッシュがあればスクロール
+      setTimeout(scrollToCardFromHash, 300)
     })()
   </script>
 </body>
