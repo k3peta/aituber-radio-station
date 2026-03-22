@@ -331,7 +331,7 @@
     const CARD_CATEGORIES = {
       radio: {
         label: '📻 ラジオ',
-        ids: ['news_morning', 'yofukashi', 'ohayou', 'hitorigoto', 'zatsugaku', 'history', 'tabi_kyoto', 'tabi_okinawa', 'tabi_hokkaido', 'hirumachi', 'short_trivia']
+        ids: ['news_morning', 'yofukashi', 'ohayou', 'hitorigoto', 'zatsugaku', 'history', 'tabi_kyoto', 'tabi_okinawa', 'tabi_hokkaido', 'tabi_toyama', 'hirumachi', 'short_trivia']
       },
       learn: {
         label: '📚 学習',
@@ -425,6 +425,15 @@
         description: '大自然、海鮮グルメ、秘湯温泉。北海道の魅力を30分まるごと語り尽くす旅番組。',
         duration: '10min', tags: ['旅', '北海道', '全台本', 'グルメ'], ai: 'none',
         setlist: 'setlist.md',
+        media: { 'media/jingle1.mp3': 'assets/jingle1.mp3', 'media/jingle2.mp3': 'assets/jingle2.mp3', 'media/bgm_chill.mp3': 'assets/bgm_chill.mp3', 'media/opening.jpg': 'assets/opening.jpg', 'media/ending.jpg': 'assets/ending.jpg' },
+        credits: CREDITS_ALL
+      },
+      tabi_toyama: {
+        id: 'tabi_toyama', title: '旅ラジオ 〜富山グルメ編〜', author: 'k3peta',
+        description: '氷見の寒ブリ、白えび、ますのすし、富山ブラック。海の幸と独自のグルメ文化を語り尽くす旅番組。ランダム風景写真で旅気分UP。',
+        duration: '10min', tags: ['旅', '富山', 'グルメ', '全台本', 'auto-scenery'], ai: 'optional',
+        setlist: 'setlist.md',
+        background: 'random',
         media: { 'media/jingle1.mp3': 'assets/jingle1.mp3', 'media/jingle2.mp3': 'assets/jingle2.mp3', 'media/bgm_chill.mp3': 'assets/bgm_chill.mp3', 'media/opening.jpg': 'assets/opening.jpg', 'media/ending.jpg': 'assets/ending.jpg' },
         credits: CREDITS_ALL
       },
