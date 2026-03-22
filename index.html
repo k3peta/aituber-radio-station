@@ -297,7 +297,6 @@
     <button class="category-tab" data-category="radio">📻 ラジオ</button>
     <button class="category-tab" data-category="learn">📚 学習</button>
     <button class="category-tab" data-category="guide">📖 ガイド</button>
-    <button class="category-tab" data-category="demo">🎭 デモ</button>
     <button class="category-tab" data-category="other">🎵 その他</button>
   </div>
 
@@ -340,15 +339,11 @@
       },
       guide: {
         label: '📖 ガイド',
-        ids: ['howto_ep01', 'howto_ep02', 'howto_ep03']
-      },
-      demo: {
-        label: '🎭 デモ',
-        ids: ['gesture_demo_solo', 'gesture_demo_duo']
+        ids: ['howto_ep01', 'howto_ep02', 'howto_ep03', 'voice_catalog', 'gesture_demo_solo', 'gesture_demo_duo']
       },
       other: {
         label: '🎵 その他',
-        ids: ['voice_catalog', 'asmr_zenkoutei']
+        ids: ['asmr_zenkoutei']
       }
     }
     const CARD_IDS = Object.values(CARD_CATEGORIES).flatMap(c => c.ids)
