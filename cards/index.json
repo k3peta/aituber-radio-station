@@ -46,36 +46,31 @@
   {
     "id": "gesture_demo_duo",
     "title": "🎭 ジェスチャーデモ（デュオ）",
+    "author": "k3peta",
     "description": "怪談ちゃんと後輩ちゃん（春日部つむぎ）が感情豊かに掛け合い！※VRMモデルは各自ご用意ください",
-    "category": "demo",
     "duration": "4min",
-    "speakers": [
-      38,
-      8
-    ],
+    "ai": "none",
     "tags": [
       "デモ",
       "ジェスチャー",
       "デュオ",
       "掛け合い"
     ],
-    "version": "1.0"
+    "setlist": "setlist.md"
   },
   {
     "id": "gesture_demo_solo",
     "title": "🎭 ジェスチャーデモ（ソロ）",
+    "author": "k3peta",
     "description": "感情に連動した15種類のジェスチャーポーズを怪談ちゃんが全力で披露するデモ番組",
-    "category": "demo",
     "duration": "3min",
-    "speakers": [
-      38
-    ],
+    "ai": "none",
     "tags": [
       "デモ",
       "ジェスチャー",
       "ポーズ"
     ],
-    "version": "1.0"
+    "setlist": "setlist.md"
   },
   {
     "id": "git_ep01",
