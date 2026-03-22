@@ -56,7 +56,8 @@
       "デュオ",
       "掛け合い"
     ],
-    "setlist": "setlist.md"
+    "setlist": "setlist.md",
+    "background": "random"
   },
   {
     "id": "gesture_demo_solo",
@@ -70,7 +71,8 @@
       "ジェスチャー",
       "ポーズ"
     ],
-    "setlist": "setlist.md"
+    "setlist": "setlist.md",
+    "background": "random"
   },
   {
     "id": "git_ep01",

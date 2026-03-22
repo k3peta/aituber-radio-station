@@ -6,5 +6,6 @@
   "duration": "3min",
   "ai": "none",
   "tags": ["デモ", "ジェスチャー", "ポーズ"],
-  "setlist": "setlist.md"
+  "setlist": "setlist.md",
+  "background": "random"
 }
